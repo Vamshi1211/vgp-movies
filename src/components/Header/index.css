@@ -1,0 +1,48 @@
+.main-container {
+  background-color: #131313;
+  height: 103px;
+  gap: 0px;
+  opacity: 0.2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header-container {
+  width: 80%;
+  max-width: 1440px;
+  background-color: none;
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.title-and-nav-container {
+  display: flex;
+  align-items: center;
+}
+
+.title-image {
+  width: 135px;
+  height: 39px;
+  top: 32px;
+  left: 165px;
+  padding: 0px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.nav-container {
+  display: flex;
+  margin-left: 20px;
+}
+
+.nav-item {
+  font-family: HK Grotesk;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: -0.35555556416511536px;
+  text-align: left;
+  color: #ffffff;
+  margin: 10px;
+}
