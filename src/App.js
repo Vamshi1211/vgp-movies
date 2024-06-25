@@ -5,6 +5,7 @@ import Home from './components/Home'
 import Popular from './components/Popular'
 import Search from './components/Search'
 import Account from './components/Account'
+import MovieItemDetails from './components/MovieItemDetails'
 
 import ProtectedRoute from './components/ProtectedRoute'
 
@@ -19,6 +20,7 @@ class App extends Component {
         <ProtectedRoute exact path="/popular" component={Popular} />
         <ProtectedRoute exact path="/search" component={Search} />
         <ProtectedRoute exact path="/account" component={Account} />
+        <ProtectedRoute exact path="/movies/:id" component={MovieItemDetails} />
       </Switch>
     )
   }

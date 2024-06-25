@@ -21,17 +21,20 @@ const Header = props => {
           onClickSearch()
         }
 
-        const opacityValue = path === '/' ? '0.5' : '1'
+        const opacityValue =
+          path === '/' || path.includes('/movies/') ? '0.5' : '1'
 
         return (
           <div className="main-bg-container" style={{opacity: opacityValue}}>
             <div className="header-top-container">
               <div className="title-and-nav-container">
-                <img
-                  src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719162886/Group_7399_1_kzymdq.png"
-                  alt="website logo"
-                  className="title-image"
-                />
+                <Link to="/">
+                  <img
+                    src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719162886/Group_7399_1_kzymdq.png"
+                    alt="website logo"
+                    className="title-image"
+                  />
+                </Link>
                 <div className="navbar-container">
                   <Link to="/" className="link-item">
                     <p className="nav-items">Home</p>

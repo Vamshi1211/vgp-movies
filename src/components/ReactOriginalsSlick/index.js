@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Slider from 'react-slick'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
@@ -86,13 +87,15 @@ class ReactOriginalsSlick extends Component {
         {originalsMovies.map(eachLogo => {
           const {id, posterPath} = eachLogo
           return (
-            <div className="slick-item" key={id}>
-              <img
-                className="originals-logo-image"
-                src={posterPath}
-                alt="company logo"
-              />
-            </div>
+            <Link to={`/movies/${id}`}>
+              <div className="slick-item" key={id}>
+                <img
+                  className="originals-logo-image"
+                  src={posterPath}
+                  alt="company logo"
+                />
+              </div>
+            </Link>
           )
         })}
       </Slider>

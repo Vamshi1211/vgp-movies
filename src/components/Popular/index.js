@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
@@ -64,9 +65,11 @@ class Popular extends Component {
           const {id, posterPath} = eachItem
 
           return (
-            <li key={id} className="popular-list-item">
-              <img src={posterPath} alt="popular" className="popular-image" />
-            </li>
+            <Link to={`/movies/${id}`}>
+              <li key={id} className="popular-list-item">
+                <img src={posterPath} alt="popular" className="popular-image" />
+              </li>
+            </Link>
           )
         })}
       </ul>

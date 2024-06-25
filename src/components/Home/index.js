@@ -87,7 +87,7 @@ class Home extends Component {
               className="home-top-container"
               style={{
                 backgroundImage: `url(${randomMovie.backdropPath})`,
-                width: '1440px',
+                width: '100%',
                 backgroundSize: 'cover',
               }}
             >
@@ -122,19 +122,11 @@ class Home extends Component {
     )
   }
 
-  renderLoadingView = () => {
-    const {topRatedMovies} = this.state
-
-    return (
-      <>
-        {topRatedMovies.length > 0 && (
-          <div className="loader-container" testid="loader">
-            <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
-          </div>
-        )}
-      </>
-    )
-  }
+  renderLoadingView = () => (
+    <div className="loader-container" testid="loader">
+      <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
+    </div>
+  )
 
   onClickRetry = () => {
     this.getTopRatedMovies()

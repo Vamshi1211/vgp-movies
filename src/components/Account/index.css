@@ -14,6 +14,9 @@
   width: 80%;
   max-width: 1440px;
   margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 }
 
 .account-heading {
@@ -185,4 +188,28 @@
   gap: 0px;
   opacity: 0px;
   color: #ffffff;
+}
+
+.logout-button {
+  background: #e50914;
+  width: 89px;
+  height: 40px;
+  top: 508px;
+  left: 675px;
+  padding: 8px 20px 8px 20px;
+  gap: 10px;
+  border-radius: 4px;
+  opacity: 0px;
+  font-family: HK Grotesk;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
