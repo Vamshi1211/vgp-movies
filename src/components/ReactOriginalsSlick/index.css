@@ -14,14 +14,42 @@
 }
 
 .originals-logo-image {
-  width: 254px;
-  height: 170px;
+  width: 90px;
+  height: 64px;
+  top: 560px;
+  left: 32px;
+  gap: 0px;
+  border-radius: 8px;
+  opacity: 0px;
   top: 708px;
   left: 166px;
   gap: 0px;
   border-radius: 8px;
   opacity: 0px;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .originals-logo-image {
+    width: 100%;
+    height: 170px;
+    max-width: 145px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .originals-logo-image {
+    width: 100%;
+    height: 170px;
+    max-width: 190px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .originals-logo-image {
+    width: 100%;
+    max-width: 254px;
+    height: 170px;
+  }
 }
 
 /* You can change the CSS color to style the Next and 
@@ -30,21 +58,42 @@ Previous Arrow buttons according to your project */
 .slick-prev:before,
 .slick-next:before {
   color: #ffffff;
-  width: 56px;
-  height: 56px;
+  width: 24px;
+  height: 24px;
+  top: 459px;
+  left: 332px;
   gap: 0px;
   opacity: 0px;
-  background: transparent;
 }
-
+@media screen and (min-width: 768px) {
+  .slick-prev:before,
+  .slick-next:before {
+    color: #ffffff;
+    width: 56px;
+    height: 56px;
+    gap: 0px;
+    opacity: 0px;
+  }
+}
 .originals-movies {
   font-family: HK Grotesk;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
-  line-height: 31.27px;
+  line-height: 20.85px;
   text-align: left;
   color: #ffffff;
   align-self: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .originals-movies {
+    font-family: HK Grotesk;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.27px;
+    text-align: left;
+    color: #ffffff;
+    align-self: flex-start;
+  }
 }
 
 .loader-container {

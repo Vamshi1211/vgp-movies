@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 
+import {Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
@@ -19,7 +20,10 @@ const apiStatusValue = {
 }
 
 class Home extends Component {
-  state = {topRatedMovies: [], apiStatus: apiStatusValue.initial}
+  state = {
+    topRatedMovies: [],
+    apiStatus: apiStatusValue.initial,
+  }
 
   componentDidMount() {
     this.getTopRatedMovies()
@@ -55,11 +59,15 @@ class Home extends Component {
   }
 
   renderHomeView = () => {
-    const {topRatedMovies} = this.state
+    const {topRatedMovies, isClickedHamburger} = this.state
+    const {match} = this.props
+    const {path} = match
 
     const randomNumber = Math.ceil(Math.random() * (topRatedMovies.length - 1))
 
     const randomMovie = topRatedMovies[randomNumber]
+
+    const opacityValue = path === '/' || path.includes('/movies/') ? '0.5' : '1'
 
     return (
       <>
@@ -92,6 +100,7 @@ class Home extends Component {
               }}
             >
               <Header />
+
               <div className="text-container">
                 <h1 className="title-name">{randomMovie.title}</h1>
                 <p className="title-description">{randomMovie.overview}</p>
@@ -109,10 +118,10 @@ class Home extends Component {
             </div>
             <div className="footer-container">
               <div className="footer-social-contacts">
-                <FaGoogle />
-                <FaTwitter />
-                <FaInstagram />
-                <FaYoutube />
+                <FaGoogle className="icons" />
+                <FaTwitter className="icons" />
+                <FaInstagram className="icons" />
+                <FaYoutube className="icons" />
               </div>
               <p className="footer-contact-us">Contact Us</p>
             </div>

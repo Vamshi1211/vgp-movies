@@ -31,6 +31,8 @@ class Login extends Component {
 
     const userData = {username, password}
 
+    localStorage.setItem('credentials', JSON.stringify(userData))
+
     const url = 'https://apis.ccbp.in/login'
     const options = {
       method: 'POST',
@@ -61,7 +63,8 @@ class Login extends Component {
         <div className="heading-container">
           <img
             src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719130432/Group_7399_k2bkjt.png"
-            alt="website logo"
+            alt="login website logo"
+            className="login-website-logo"
           />
         </div>
         <div className="form-bg-container">

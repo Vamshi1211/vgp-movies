@@ -27,6 +27,7 @@ specifiers:
   react-slick: 0.28.1
   react-slick-slider: 0.15.10
   slick-carousel: 1.8.1
+  uuid: 10.0.0
 
 dependencies:
   '@testing-library/jest-dom': 5.11.9
@@ -47,6 +48,7 @@ dependencies:
   react-slick: 0.28.1_react-dom@17.0.1+react@17.0.1
   react-slick-slider: 0.15.10_react-dom@17.0.1+react@17.0.1
   slick-carousel: 1.8.1
+  uuid: 10.0.0
 
 devDependencies:
   eslint-config-airbnb: 18.2.1
@@ -12158,6 +12160,11 @@ packages:
     resolution: {integrity: sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=}
     engines: {node: '>= 0.4.0'}
     dev: true
+
+  /uuid/10.0.0:
+    resolution: {integrity: sha512-8XkAphELsDnEGrDxUOHB3RGvXz6TeuYSGEZBOjtTtPm2lwhGBjLgOzLHB63IUWfBpNucQjND6d3AOudO+H3RWQ==}
+    hasBin: true
+    dev: false
 
   /uuid/3.4.0:
     resolution: {integrity: sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==}

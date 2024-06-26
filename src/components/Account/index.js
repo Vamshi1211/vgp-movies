@@ -12,6 +12,10 @@ const Account = props => {
     Cookies.remove('jwt_token')
   }
 
+  const getCredentials = localStorage.getItem('credentials')
+
+  const parsedData = JSON.parse(getCredentials)
+
   return (
     <div className="account-main-container">
       <Header />
@@ -21,8 +25,10 @@ const Account = props => {
         <div className="account-information-container">
           <p className="membership">Member ship </p>
           <div className="profile-info-container">
-            <p className="g-mail">rahul@gmail.com</p>
-            <p className="password-value">Password : ************</p>
+            <p className="g-mail">{parsedData.username}</p>
+            <p className="password-value">
+              Password : {'*'.repeat(parsedData.password.length)}
+            </p>
           </div>
         </div>
         <hr className="horizontal-line" />

@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
+import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import format from 'date-fns/format'
 import Header from '../Header'
 import SimilarMovies from '../SimilarMovies'
@@ -23,6 +24,7 @@ class MovieItemDetails extends Component {
 
   getMovieDetails = async () => {
     this.setState({apiStatus: apiStatusValue.inProgress})
+
     const {match} = this.props
     const {params} = match
     const {id} = params
@@ -190,6 +192,16 @@ class MovieItemDetails extends Component {
             ))}
           </ul>
         </div>
+
+        <div className="movie-details-footer-container">
+          <div className="movie-details-footer-social-contacts">
+            <FaGoogle />
+            <FaTwitter />
+            <FaInstagram />
+            <FaYoutube />
+          </div>
+          <p className="movie-details-footer-contact-us">Contact Us</p>
+        </div>
       </>
     )
   }
@@ -197,6 +209,29 @@ class MovieItemDetails extends Component {
   renderLoadingView = () => (
     <div className="movie-details-loader-container" testid="loader">
       <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
+    </div>
+  )
+
+  onClickRetry = () => {
+    this.getMovieDetails()
+  }
+
+  renderFailureView = () => (
+    <div className="movie-details-failure-container">
+      <img
+        src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719224516/Icon_j5mhse.png"
+        alt="failure view"
+      />
+      <p className="movie-details-failure-description">
+        Something went wrong. Please try again
+      </p>
+      <button
+        type="button"
+        className="movie-details-try-again"
+        onClick={this.onClickRetry}
+      >
+        Try Again
+      </button>
     </div>
   )
 
@@ -218,6 +253,7 @@ class MovieItemDetails extends Component {
 
   render() {
     const {movieDetails} = this.state
+
     return (
       <div className="movie-details-main-container">
         {movieDetails.length <= 0 && <Header />}

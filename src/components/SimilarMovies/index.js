@@ -2,12 +2,8 @@ import {Link} from 'react-router-dom'
 import './index.css'
 
 const SimilarMovies = props => {
-  const {eachMovie, onClickSimilar} = props
+  const {eachMovie} = props
   const {id} = eachMovie
-
-  //   const onClickSimilarMovie = () => {
-  //     onClickSimilar(id)
-  //   }
 
   return (
     <Link to={`/movies/${id}`}>

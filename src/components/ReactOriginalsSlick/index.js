@@ -87,15 +87,15 @@ class ReactOriginalsSlick extends Component {
         {originalsMovies.map(eachLogo => {
           const {id, posterPath} = eachLogo
           return (
-            <Link to={`/movies/${id}`}>
-              <div className="slick-item" key={id}>
+            <div className="slick-item" key={id}>
+              <Link to={`/movies/${id}`}>
                 <img
                   className="originals-logo-image"
                   src={posterPath}
                   alt="company logo"
                 />
-              </div>
-            </Link>
+              </Link>
+            </div>
           )
         })}
       </Slider>
