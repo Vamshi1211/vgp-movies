@@ -85,17 +85,22 @@
 
 .title-description {
   font-family: HK Grotesk;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 20.85px;
   text-align: left;
   color: #ffffff;
-  width: 296px;
-
+  width: 275px;
   top: 255px;
   left: 32px;
   gap: 0px;
   opacity: 0px;
+}
+@media screen and (min-width: 320px) {
+  .title-description {
+    width: 296px;
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -284,68 +289,156 @@
 }
 
 .loader-container {
-  height: 605px;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #0d0d0d;
-  width: 1109px;
-  height: 466px;
-  top: 135px;
-  left: 166px;
+  width: 80%;
+  /* max-width: 296px; */
+  height: 213px;
+  top: 83px;
+  left: 32px;
   gap: 0px;
-  border-radius: 8px;
+  border-radius: 4px;
   opacity: 0px;
+}
+@media screen and (min-width: 768px) {
+  .loader-container {
+    height: 605px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d0d0d;
+    width: 80%;
+    height: 466px;
+    top: 135px;
+    left: 166px;
+    gap: 0px;
+    border-radius: 8px;
+    opacity: 0px;
+  }
 }
 
 .failure-container {
   height: 605px;
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #0d0d0d;
-  width: 1109px;
-  height: 466px;
-  top: 135px;
-  left: 166px;
+  height: 213px;
+  top: 83px;
+  left: 32px;
   gap: 0px;
-  border-radius: 8px;
+  border-radius: 4px;
   opacity: 0px;
+}
+@media screen and (min-width: 768px) {
+  .failure-container {
+    height: 605px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0d0d0d;
+    height: 466px;
+    top: 135px;
+    left: 166px;
+    gap: 0px;
+    border-radius: 8px;
+    opacity: 0px;
+  }
+}
+
+.failure-image {
+  width: 24px;
+  height: 24px;
+  top: 142px;
+  left: 169px;
+  padding: 2px 1px 3px 1px;
+  gap: 0px;
+  opacity: 0px;
+}
+@media screen and (min-width: 768px) {
+  .failure-image {
+    width: 48px;
+    height: 48px;
+    top: 303px;
+    left: 697px;
+    padding: 4px 2px 6px 2px;
+    gap: 0px;
+    opacity: 0px;
+  }
 }
 
 .failure-description {
   font-family: HK Grotesk;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
-  line-height: 18.24px;
+  line-height: 15.64px;
   text-align: left;
-  width: 251px;
-  height: 18px;
-  top: 367px;
-  left: 595px;
+  width: 215px;
+  height: 16px;
+  top: 178px;
+  left: 73px;
   gap: 0px;
   opacity: 0px;
   color: #ffffff;
 }
+@media screen and (min-width: 768px) {
+  .failure-description {
+    font-family: HK Grotesk;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.24px;
+    text-align: left;
+    width: 251px;
+    height: 18px;
+    top: 367px;
+    left: 595px;
+    gap: 0px;
+    opacity: 0px;
+    color: #ffffff;
+  }
+}
 
 .try-again {
   font-family: HK Grotesk;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 24px;
   text-align: left;
   color: #171f46;
   background: #ffffff;
-  width: 94px;
-  height: 32px;
-  padding: 4px 16px 4px 16px;
+  width: 77px;
+  height: 28px;
+  padding: 2px 12px 2px 12px;
   gap: 8px;
   border-radius: 4px;
   opacity: 0px;
+
   outline: none;
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .try-again {
+    font-family: HK Grotesk;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    color: #171f46;
+    background: #ffffff;
+    width: 94px;
+    height: 32px;
+    padding: 4px 16px 4px 16px;
+    gap: 8px;
+    border-radius: 4px;
+    opacity: 0px;
+    outline: none;
+    cursor: pointer;
+  }
 }
 
 .loader-containers {

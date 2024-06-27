@@ -1,28 +1,33 @@
 .similar-list-item-container {
   list-style-type: none;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  margin-right: 15px;
 }
-
-.button-item-container {
-  width: 255px;
-  height: 170px;
-  top: 758px;
-  left: 165px;
-  gap: 0px;
-  border-radius: 8px;
-  opacity: 0px;
-  cursor: pointer;
-  outline: none;
-  border: none;
-  padding-left: 0px;
+@media screen and (min-width: 768px) {
+  .similar-list-item-container {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
 }
 
 .similar-movie-image {
-  width: 255px;
-  height: 170px;
-  top: 758px;
-  left: 165px;
+  width: 90px;
+  height: 64px;
+  top: 692px;
+  left: 32px;
   gap: 0px;
   border-radius: 8px;
   opacity: 0px;
+}
+
+@media screen and (min-width: 768px) {
+  .similar-movie-image {
+    width: 255px;
+    height: 170px;
+    top: 758px;
+    left: 165px;
+    gap: 0px;
+    border-radius: 8px;
+    opacity: 0px;
+  }
 }

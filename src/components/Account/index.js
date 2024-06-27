@@ -45,10 +45,10 @@ const Account = props => {
       </div>
       <div className="account-footer-container">
         <div className="account-footer-social-contacts">
-          <FaGoogle />
-          <FaTwitter />
-          <FaInstagram />
-          <FaYoutube />
+          <FaGoogle className="account-icons" />
+          <FaTwitter className="account-icons" />
+          <FaInstagram className="account-icons" />
+          <FaYoutube className="account-icons" />
         </div>
         <p className="account-footer-contact-us">Contact Us</p>
       </div>

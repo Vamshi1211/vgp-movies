@@ -1,4 +1,5 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 import Header from '../Header'
@@ -70,15 +71,17 @@ class Search extends Component {
         {searchResults.length > 0 ? (
           <ul className="search-list-container">
             {searchResults.map(eachResult => {
-              const {id, posterPath} = eachResult
+              const {id, posterPath, title} = eachResult
 
               return (
                 <li className="search-list-item" key={id}>
-                  <img
-                    src={posterPath}
-                    alt="poster"
-                    className="search-poster"
-                  />
+                  <Link to={`/movies/${id}`}>
+                    <img
+                      src={posterPath}
+                      alt={title}
+                      className="search-poster"
+                    />
+                  </Link>
                 </li>
               )
             })}
@@ -100,15 +103,20 @@ class Search extends Component {
   }
 
   renderFailureView = () => (
-    <div className="failure-container">
+    <div className="search-failure-container">
       <img
         src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719224516/Icon_j5mhse.png"
         alt="failure view"
+        className="search-failure-image"
       />
-      <p className="failure-description">
+      <p className="search-failure-description">
         Something went wrong. Please try again
       </p>
-      <button type="button" className="try-again" onClick={this.onClickRetry}>
+      <button
+        type="button"
+        className="search-try-again"
+        onClick={this.onClickRetry}
+      >
         Try Again
       </button>
     </div>

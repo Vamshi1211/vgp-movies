@@ -85,14 +85,14 @@ class ReactTrendingSlick extends Component {
     return (
       <Slider {...settings}>
         {trendingMovies.map(eachLogo => {
-          const {id, posterPath} = eachLogo
+          const {id, posterPath, title} = eachLogo
           return (
             <div className="slick-item" key={id}>
               <Link to={`/movies/${id}`}>
                 <img
                   className="trending-logo-image"
                   src={posterPath}
-                  alt="company logo"
+                  alt={title}
                 />
               </Link>
             </div>
@@ -103,7 +103,7 @@ class ReactTrendingSlick extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="loader-container" testid="loader">
+    <div className="trending-loader-container" testid="loader">
       <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
     </div>
   )
@@ -113,15 +113,20 @@ class ReactTrendingSlick extends Component {
   }
 
   renderFailureView = () => (
-    <div className="failure-container">
+    <div className="trending-failure-container">
       <img
         src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719224516/Icon_j5mhse.png"
         alt="failure view"
+        className="trending-failure-image"
       />
-      <p className="failure-description">
+      <p className="trending-failure-description">
         Something went wrong. Please try again
       </p>
-      <button type="button" className="try-again" onClick={this.onClickRetry}>
+      <button
+        type="button"
+        className="trending-try-again"
+        onClick={this.onClickRetry}
+      >
         Try Again
       </button>
     </div>

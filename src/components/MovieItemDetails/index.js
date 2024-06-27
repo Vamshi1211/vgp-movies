@@ -160,7 +160,7 @@ class MovieItemDetails extends Component {
             </ul>
 
             <ul className="rating-average-container">
-              <p className="rating-average-container">Rating Average</p>
+              <p className="rating-average-heading">Rating Average</p>
               <li className="rating-avg-item">
                 <p className="rating-average">{voteAverage}</p>
               </li>
@@ -195,10 +195,10 @@ class MovieItemDetails extends Component {
 
         <div className="movie-details-footer-container">
           <div className="movie-details-footer-social-contacts">
-            <FaGoogle />
-            <FaTwitter />
-            <FaInstagram />
-            <FaYoutube />
+            <FaGoogle className="movie-details-icons" />
+            <FaTwitter className="movie-details-icons" />
+            <FaInstagram className="movie-details-icons" />
+            <FaYoutube className="movie-details-icons" />
           </div>
           <p className="movie-details-footer-contact-us">Contact Us</p>
         </div>
@@ -221,6 +221,7 @@ class MovieItemDetails extends Component {
       <img
         src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719224516/Icon_j5mhse.png"
         alt="failure view"
+        className="movie-details-failure-image"
       />
       <p className="movie-details-failure-description">
         Something went wrong. Please try again

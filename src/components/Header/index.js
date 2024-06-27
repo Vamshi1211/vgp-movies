@@ -9,7 +9,9 @@ class Header extends Component {
   state = {isClickedHamburger: false}
 
   onClickHamburgerButton = () => {
-    this.setState({isClickedHamburger: true})
+    this.setState(prevState => ({
+      isClickedHamburger: !prevState.isClickedHamburger,
+    }))
   }
 
   onClickCrossButton = () => {
@@ -73,6 +75,7 @@ class Header extends Component {
                         className="search-input"
                         value={searchInput}
                         onChange={onChangeSearchInput}
+                        placeholder="Search"
                       />
                       <button
                         type="button"

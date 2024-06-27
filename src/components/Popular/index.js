@@ -51,7 +51,7 @@ class Popular extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="loader-containers" testid="loader">
+    <div className="popular-loader-container" testid="loader">
       <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
     </div>
   )
@@ -62,12 +62,12 @@ class Popular extends Component {
     return (
       <ul className="popular-list-container">
         {popularMovies.map(eachItem => {
-          const {id, posterPath} = eachItem
+          const {id, posterPath, title} = eachItem
 
           return (
             <Link to={`/movies/${id}`}>
               <li key={id} className="popular-list-item">
-                <img src={posterPath} alt="popular" className="popular-image" />
+                <img src={posterPath} alt={title} className="popular-image" />
               </li>
             </Link>
           )
@@ -75,6 +75,26 @@ class Popular extends Component {
       </ul>
     )
   }
+
+  renderFailureView = () => (
+    <div className="popular-failure-container">
+      <img
+        src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719224516/Icon_j5mhse.png"
+        alt="failure view"
+        className="popular-failure-image"
+      />
+      <p className="popular-failure-description">
+        Something went wrong. Please try again
+      </p>
+      <button
+        type="button"
+        className="popular-try-again"
+        onClick={this.onClickRetry}
+      >
+        Try Again
+      </button>
+    </div>
+  )
 
   renderViews = () => {
     const {apiStatus} = this.state

@@ -85,14 +85,14 @@ class ReactOriginalsSlick extends Component {
     return (
       <Slider {...settings}>
         {originalsMovies.map(eachLogo => {
-          const {id, posterPath} = eachLogo
+          const {id, posterPath, title} = eachLogo
           return (
             <div className="slick-item" key={id}>
               <Link to={`/movies/${id}`}>
                 <img
                   className="originals-logo-image"
                   src={posterPath}
-                  alt="company logo"
+                  alt={title}
                 />
               </Link>
             </div>
@@ -103,7 +103,7 @@ class ReactOriginalsSlick extends Component {
   }
 
   renderLoadingView = () => (
-    <div className="loader-container" testid="loader">
+    <div className="original-loader-container" testid="loader">
       <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
     </div>
   )
@@ -113,15 +113,20 @@ class ReactOriginalsSlick extends Component {
   }
 
   renderFailureView = () => (
-    <div className="failure-container">
+    <div className="original-failure-container">
       <img
         src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719224516/Icon_j5mhse.png"
         alt="failure view"
+        className="original-failure-image"
       />
-      <p className="failure-description">
+      <p className="original-failure-description">
         Something went wrong. Please try again
       </p>
-      <button type="button" className="try-again" onClick={this.onClickRetry}>
+      <button
+        type="button"
+        className="original-try-again"
+        onClick={this.onClickRetry}
+      >
         Try Again
       </button>
     </div>
