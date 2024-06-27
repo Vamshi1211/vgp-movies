@@ -65,15 +65,19 @@ class Popular extends Component {
           const {id, posterPath, title} = eachItem
 
           return (
-            <Link to={`/movies/${id}`}>
-              <li key={id} className="popular-list-item">
+            <li key={id} className="popular-list-item">
+              <Link to={`/movies/${id}`}>
                 <img src={posterPath} alt={title} className="popular-image" />
-              </li>
-            </Link>
+              </Link>
+            </li>
           )
         })}
       </ul>
     )
+  }
+
+  onClickRetry = () => {
+    this.getPopularMovies()
   }
 
   renderFailureView = () => (

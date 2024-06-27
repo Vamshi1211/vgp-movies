@@ -1,7 +1,6 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 
-import {Link} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
@@ -59,15 +58,13 @@ class Home extends Component {
   }
 
   renderHomeView = () => {
-    const {topRatedMovies, isClickedHamburger} = this.state
-    const {match} = this.props
-    const {path} = match
+    const {topRatedMovies} = this.state
 
     const randomNumber = Math.ceil(Math.random() * (topRatedMovies.length - 1))
 
     const randomMovie = topRatedMovies[randomNumber]
 
-    const opacityValue = path === '/' || path.includes('/movies/') ? '0.5' : '1'
+    // const opacityValue = path === '/' || path.includes('/movies/') ? '0.5' : '1'
 
     return (
       <>
@@ -172,12 +169,6 @@ class Home extends Component {
         return null
     }
   }
-
-  //   renderLoadingViewForHome = () => (
-  //     <div className="loader-containers" testid="loader">
-  //       <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
-  //     </div>
-  //   )
 
   render() {
     const {topRatedMovies} = this.state

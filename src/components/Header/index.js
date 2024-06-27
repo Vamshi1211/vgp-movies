@@ -37,7 +37,10 @@ class Header extends Component {
           }
 
           const opacityValue =
-            path === '/' || path.includes('/movies/') ? '0.5' : '1'
+            path === '/' || path.includes('/movies/') ? '0.6' : '1'
+
+          const hamburgerBg =
+            path === '/' || path.includes('/movies/') ? '1' : '1'
 
           /* const heightValue = isClickedHamburger ? '100px' : '75px' */
 
@@ -45,11 +48,13 @@ class Header extends Component {
             <div className="main-bg-container" style={{opacity: opacityValue}}>
               <div className="header-top-container">
                 <div className="mobile-image-container">
-                  <img
-                    src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719162886/Group_7399_1_kzymdq.png"
-                    alt="website logo"
-                    className="title-image"
-                  />
+                  <Link to="/">
+                    <img
+                      src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719162886/Group_7399_1_kzymdq.png"
+                      alt="website logo"
+                      className="title-image"
+                    />
+                  </Link>
                 </div>
                 <div className="title-and-nav-container">
                   <Link to="/">
@@ -117,10 +122,7 @@ class Header extends Component {
                 </div>
               </div>
               {isClickedHamburger === true && (
-                <div
-                  className="popup-container"
-                  style={{opacity: opacityValue}}
-                >
+                <div className="popup-container" style={{opacity: hamburgerBg}}>
                   <Link to="/" className="link-item">
                     <p className="hamburger-items">Home</p>
                   </Link>

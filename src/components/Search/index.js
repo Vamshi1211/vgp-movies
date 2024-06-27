@@ -102,6 +102,10 @@ class Search extends Component {
     )
   }
 
+  onClickRetry = () => {
+    this.getSearchResults()
+  }
+
   renderFailureView = () => (
     <div className="search-failure-container">
       <img

@@ -69,8 +69,6 @@ class MovieItemDetails extends Component {
     const {
       adult,
       backdropPath,
-      posterPath,
-      id,
       title,
       budget,
       genres,
@@ -115,7 +113,7 @@ class MovieItemDetails extends Component {
             <h1 className="movie-title">{title}</h1>
             <div className="duration-rated-release-date-container">
               <p className="run-time">{`${hours}h ${mins}m`}</p>
-              <p className="certificate">{adult ? 'A' : 'U/A'}</p>
+              <p className="certificate">{adult === true ? 'A' : 'U/A'}</p>
               <p className="release-year">{year}</p>
             </div>
             <p className="overview_des">{overview}</p>
@@ -256,7 +254,7 @@ class MovieItemDetails extends Component {
     const {movieDetails} = this.state
 
     return (
-      <div className="movie-details-main-container">
+      <div className="movie-details-main-container" testid="movieItem">
         {movieDetails.length <= 0 && <Header />}
         {this.renderViews()}
       </div>
