@@ -34,7 +34,7 @@
   .popular-list-container {
     padding-left: 0px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     width: 80%;

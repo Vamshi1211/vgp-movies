@@ -47,15 +47,6 @@ class Header extends Component {
           return (
             <div className="main-bg-container" style={{opacity: opacityValue}}>
               <div className="header-top-container">
-                <div className="mobile-image-container">
-                  <Link to="/">
-                    <img
-                      src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719162886/Group_7399_1_kzymdq.png"
-                      alt="website logo"
-                      className="title-image"
-                    />
-                  </Link>
-                </div>
                 <div className="title-and-nav-container">
                   <Link to="/">
                     <img
@@ -64,14 +55,14 @@ class Header extends Component {
                       className="title-image"
                     />
                   </Link>
-                  <div className="navbar-container">
+                  <ul className="navbar-container">
                     <Link to="/" className="link-item">
-                      <p className="nav-items">Home</p>
+                      <li className="nav-item">Home</li>
                     </Link>
                     <Link to="/popular" className="link-item">
-                      <p className="nav-items">Popular</p>
+                      <li className="nav-item">Popular</li>
                     </Link>
-                  </div>
+                  </ul>
                 </div>
                 <div className="search-and-profile">
                   {path === '/search' ? (
@@ -122,15 +113,15 @@ class Header extends Component {
                 </div>
               </div>
               {isClickedHamburger === true && (
-                <div className="popup-container" style={{opacity: hamburgerBg}}>
-                  <Link to="/" className="link-item">
-                    <p className="hamburger-items">Home</p>
+                <ul className="popup-container" style={{opacity: hamburgerBg}}>
+                  <Link to="/" className="hamburger-link-item ">
+                    <li className="nav-item">Home</li>
                   </Link>
-                  <Link to="/popular" className="link-item">
-                    <p className="hamburger-items">Popular</p>
+                  <Link to="/popular" className="hamburger-link-item">
+                    <li className="nav-item">Popular</li>
                   </Link>
-                  <Link to="/account" className="link-item">
-                    <p className="hamburger-items">Account</p>
+                  <Link to="/account" className="hamburger-link-item">
+                    <li className="nav-item">Account</li>
                   </Link>
 
                   <button
@@ -144,7 +135,7 @@ class Header extends Component {
                       className="cross-icon"
                     />
                   </button>
-                </div>
+                </ul>
               )}
             </div>
           )

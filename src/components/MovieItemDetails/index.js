@@ -1,10 +1,11 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
-import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
+// import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import format from 'date-fns/format'
 import Header from '../Header'
 import SimilarMovies from '../SimilarMovies'
+import Footer from '../Footer'
 
 import './index.css'
 
@@ -126,7 +127,7 @@ class MovieItemDetails extends Component {
 
         <div className="details-container">
           <ul className="genre-container">
-            <p className="genre-heading">Genres</p>
+            <h1 className="genre-heading">Genres</h1>
             {updatedGenres.map(eachItem => {
               const {uniqueId, name} = eachItem
               return (
@@ -151,14 +152,14 @@ class MovieItemDetails extends Component {
 
           <div className="rating-count-average-container">
             <ul className="rating-list-container">
-              <p className="rating-count-heading">Rating Count</p>
+              <h1 className="rating-count-heading">Rating Count</h1>
               <li className="rating-item">
                 <p className="rating-count">{voteCount}</p>
               </li>
             </ul>
 
             <ul className="rating-average-container">
-              <p className="rating-average-heading">Rating Average</p>
+              <h1 className="rating-average-heading">Rating Average</h1>
               <li className="rating-avg-item">
                 <p className="rating-average">{voteAverage}</p>
               </li>
@@ -167,14 +168,14 @@ class MovieItemDetails extends Component {
 
           <div className="budget-release-date-container">
             <ul className="budget-list-container">
-              <p className="budget-heading">Budget</p>
+              <h1 className="budget-heading">Budget</h1>
               <li className="budget-item-container">
                 <p className="budget-value">{budget}</p>
               </li>
             </ul>
 
             <ul className="release-list-container">
-              <p className="release-date-heading">Release Date</p>
+              <h1 className="release-date-heading">Release Date</h1>
               <li className="release-date-item-container">
                 <p className="release-date-value">{`${date}th ${month} ${year}`}</p>
               </li>
@@ -191,15 +192,7 @@ class MovieItemDetails extends Component {
           </ul>
         </div>
 
-        <div className="movie-details-footer-container">
-          <div className="movie-details-footer-social-contacts">
-            <FaGoogle className="movie-details-icons" />
-            <FaTwitter className="movie-details-icons" />
-            <FaInstagram className="movie-details-icons" />
-            <FaYoutube className="movie-details-icons" />
-          </div>
-          <p className="movie-details-footer-contact-us">Contact Us</p>
-        </div>
+        <Footer />
       </>
     )
   }
@@ -263,3 +256,13 @@ class MovieItemDetails extends Component {
 }
 
 export default MovieItemDetails
+
+/* <div className="movie-details-footer-container">
+          <div className="movie-details-footer-social-contacts">
+            <FaGoogle className="movie-details-icons" />
+            <FaTwitter className="movie-details-icons" />
+            <FaInstagram className="movie-details-icons" />
+            <FaYoutube className="movie-details-icons" />
+          </div>
+          <p className="movie-details-footer-contact-us">Contact Us</p>
+        </div> */

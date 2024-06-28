@@ -1,7 +1,8 @@
-import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
+// import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import Cookies from 'js-cookie'
 
 import Header from '../Header'
+import Footer from '../Footer'
 
 import './index.css'
 
@@ -17,7 +18,7 @@ const Account = props => {
   const parsedData = JSON.parse(getCredentials)
 
   return (
-    <div className="account-main-container">
+    <div className="account-main-container" data-testid="account">
       <Header />
       <div className="account-container">
         <h1 className="account-heading">Account</h1>
@@ -44,13 +45,7 @@ const Account = props => {
         </button>
       </div>
       <div className="account-footer-container">
-        <div className="account-footer-social-contacts">
-          <FaGoogle className="account-icons" />
-          <FaTwitter className="account-icons" />
-          <FaInstagram className="account-icons" />
-          <FaYoutube className="account-icons" />
-        </div>
-        <p className="account-footer-contact-us">Contact Us</p>
+        <Footer />
       </div>
     </div>
   )

@@ -274,6 +274,32 @@
 }
 
 .login-button {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .login-button {
+    width: 360px;
+    height: 40px;
+    gap: 0px;
+    border-radius: 8px;
+    opacity: 0px;
+    font-family: HK Grotesk;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    color: #f8fafc;
+    background: #e50914;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    margin-top: 40px;
+    display: block;
+  }
+}
+
+.sign-button {
   width: 296px;
   height: 40px;
   top: 404px;
@@ -295,26 +321,12 @@
   outline: none;
   border: none;
   margin-top: 40px;
+  display: block;
 }
 
 @media screen and (min-width: 768px) {
-  .login-button {
-    width: 360px;
-    height: 40px;
-    gap: 0px;
-    border-radius: 8px;
-    opacity: 0px;
-    font-family: HK Grotesk;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 24px;
-    text-align: center;
-    color: #f8fafc;
-    background: #e50914;
-    cursor: pointer;
-    outline: none;
-    border: none;
-    margin-top: 40px;
+  .sign-button {
+    display: none;
   }
 }
 

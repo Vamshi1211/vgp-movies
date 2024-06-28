@@ -17,7 +17,7 @@ class Login extends Component {
 
   oSubmitSuccess = jwtToken => {
     const {history} = this.props
-    Cookies.set('jwt_token', jwtToken)
+    Cookies.set('jwt_token', jwtToken, {expires: 30})
     history.replace('/')
   }
 
@@ -100,6 +100,10 @@ class Login extends Component {
 
             <button type="submit" className="login-button">
               Login
+            </button>
+
+            <button type="submit" className="sign-button">
+              Sign in
             </button>
           </form>
         </div>

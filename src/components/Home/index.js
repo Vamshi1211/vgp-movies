@@ -3,8 +3,7 @@ import Loader from 'react-loader-spinner'
 
 import Cookies from 'js-cookie'
 
-import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
-
+import Footer from '../Footer'
 import Header from '../Header'
 import ReactTrendingSlick from '../ReactTrendingSlick'
 import ReactOriginalsSlick from '../ReactOriginalsSlick'
@@ -113,15 +112,7 @@ class Home extends Component {
                 <ReactOriginalsSlick />
               </div>
             </div>
-            <div className="footer-container">
-              <div className="footer-social-contacts">
-                <FaGoogle className="icons" />
-                <FaTwitter className="icons" />
-                <FaInstagram className="icons" />
-                <FaYoutube className="icons" />
-              </div>
-              <p className="footer-contact-us">Contact Us</p>
-            </div>
+            <Footer />
           </>
         )}
       </>
