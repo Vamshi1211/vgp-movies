@@ -20,18 +20,6 @@
   margin-top: 75px;
   padding-top: 0px;
 }
-@media screen and (min-width: 768px) {
-  .account-container {
-    background-color: #ffffff;
-    width: 80%;
-    max-width: 1440px;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    margin-top: 0px;
-  }
-}
 
 .account-heading {
   font-family: HK Grotesk;
@@ -48,22 +36,6 @@
   gap: 0px;
   opacity: 0px;
 }
-@media screen and (min-width: 768px) {
-  .account-heading {
-    font-family: HK Grotesk;
-    font-size: 36px;
-    font-weight: 700;
-    line-height: 46.91px;
-    text-align: left;
-    color: #131313;
-    width: 133px;
-    height: 47px;
-    top: 167px;
-    left: 165px;
-    gap: 0px;
-    opacity: 0px;
-  }
-}
 
 .horizontal-line {
   width: 100%;
@@ -74,18 +46,6 @@
   border-radius: 10px;
   opacity: 0px;
   background: #cbd5e1;
-}
-@media screen and (min-width: 768px) {
-  .horizontal-line {
-    width: 100%;
-    height: 2px;
-    top: 238px;
-    left: 165px;
-    gap: 0px;
-    border-radius: 10px;
-    opacity: 0px;
-    background: #cbd5e1;
-  }
 }
 
 .account-information-container {
@@ -107,22 +67,6 @@
   gap: 0px;
   opacity: 0px;
 }
-@media screen and (min-width: 768px) {
-  .membership {
-    font-family: HK Grotesk;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 31.27px;
-    text-align: left;
-    color: #94a3b8;
-    width: 142px;
-    height: 31px;
-    top: 264px;
-    left: 165px;
-    gap: 0px;
-    opacity: 0px;
-  }
-}
 
 .profile-info-container {
   margin-left: 20px;
@@ -142,22 +86,6 @@
   opacity: 0px;
   color: #1e293b;
 }
-@media screen and (min-width: 768px) {
-  .g-mail {
-    font-family: HK Grotesk;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 31.27px;
-    text-align: left;
-    width: 194px;
-    height: 31px;
-    top: 264px;
-    left: 331px;
-    gap: 0px;
-    opacity: 0px;
-    color: #1e293b;
-  }
-}
 
 .password-value {
   font-family: HK Grotesk;
@@ -172,22 +100,6 @@
   left: 149px;
   gap: 0px;
   opacity: 0px;
-}
-@media screen and (min-width: 768px) {
-  .password-value {
-    font-family: HK Grotesk;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 31.27px;
-    text-align: left;
-    color: #64748b;
-    width: 257px;
-    height: 31px;
-    top: 308px;
-    left: 331px;
-    gap: 0px;
-    opacity: 0px;
-  }
 }
 
 .plan-details-container {
@@ -209,23 +121,6 @@
   color: #94a3b8;
 }
 
-@media screen and (min-width: 768px) {
-  .plan-details {
-    font-family: HK Grotesk;
-    font-size: 24px;
-    font-weight: 600;
-    line-height: 31.27px;
-    text-align: left;
-    width: 125px;
-    height: 31px;
-    top: 389px;
-    left: 165px;
-    gap: 0px;
-    opacity: 0px;
-    color: #94a3b8;
-  }
-}
-
 .premium {
   font-family: HK Grotesk;
   font-size: 16px;
@@ -239,22 +134,6 @@
   opacity: 0px;
   color: #1e293b;
   margin-left: 20px;
-}
-@media screen and (min-width: 768px) {
-  .premium {
-    font-family: HK Grotesk;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 31.27px;
-    text-align: left;
-    height: 31px;
-    top: 389px;
-    left: 331px;
-    gap: 0px;
-    opacity: 0px;
-    color: #1e293b;
-    margin-left: 20px;
-  }
 }
 
 .video-resolution {
@@ -273,26 +152,6 @@
   font-weight: 600;
   line-height: 18.24px;
   text-align: left;
-}
-
-@media screen and (min-width: 768px) {
-  .video-resolution {
-    width: 72px;
-    height: 27px;
-    top: 391px;
-    left: 443px;
-    padding: 2px 4px 2px 4px;
-    gap: 10px;
-    border-radius: 2px;
-    opacity: 0px;
-    border: 1px solid #1e293b;
-    font-family: HK Grotesk;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 23.45px;
-    text-align: left;
-    color: #1e293b;
-  }
 }
 
 .account-footer-container {
@@ -320,19 +179,6 @@
   display: flex;
   justify-content: space-between;
 }
-@media screen and (min-width: 768px) {
-  .account-footer-social-contacts {
-    width: 145px;
-    height: 21px;
-    top: 1231px;
-    left: 648px;
-    gap: 0px;
-    opacity: 0px;
-    color: #ffffff;
-    display: flex;
-    justify-content: space-between;
-  }
-}
 
 .account-icons {
   font-family: Font Awesome 5 Brands;
@@ -346,21 +192,6 @@
   left: 220px;
   gap: 0px;
   opacity: 0px;
-}
-@media screen and (min-width: 768px) {
-  .account-icons {
-    font-family: Font Awesome 5 Brands;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 20.7px;
-    text-align: center;
-    width: 21px;
-    height: 21px;
-    top: 899px;
-    left: 771px;
-    gap: 0px;
-    opacity: 0px;
-  }
 }
 
 .account-footer-contact-us {
@@ -378,22 +209,6 @@
   color: #ffffff;
 }
 
-@media screen and (min-width: 768px) {
-  .account-footer-contact-us {
-    font-family: HK Grotesk;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 24px;
-    text-align: left;
-    width: 80px;
-    height: 24px;
-    top: 1268px;
-    left: 680px;
-    gap: 0px;
-    opacity: 0px;
-  }
-}
-
 .logout-button {
   background: #e50914;
   width: 89px;
@@ -409,7 +224,6 @@
   font-weight: 600;
   line-height: 24px;
   text-align: center;
-
   color: #ffffff;
   border: none;
   outline: none;
@@ -420,6 +234,176 @@
 }
 
 @media screen and (min-width: 768px) {
+  .account-container {
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 1440px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 0px;
+  }
+
+  .account-heading {
+    font-family: HK Grotesk;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46.91px;
+    text-align: left;
+    color: #131313;
+    width: 133px;
+    height: 47px;
+    top: 167px;
+    left: 165px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .horizontal-line {
+    width: 100%;
+    height: 2px;
+    top: 238px;
+    left: 165px;
+    gap: 0px;
+    border-radius: 10px;
+    opacity: 0px;
+    background: #cbd5e1;
+  }
+
+  .membership {
+    font-family: HK Grotesk;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.27px;
+    text-align: left;
+    color: #94a3b8;
+    width: 142px;
+    height: 31px;
+    top: 264px;
+    left: 165px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .g-mail {
+    font-family: HK Grotesk;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31.27px;
+    text-align: left;
+    width: 194px;
+    height: 31px;
+    top: 264px;
+    left: 331px;
+    gap: 0px;
+    opacity: 0px;
+    color: #1e293b;
+  }
+
+  .password-value {
+    font-family: HK Grotesk;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31.27px;
+    text-align: left;
+    color: #64748b;
+    width: 257px;
+    height: 31px;
+    top: 308px;
+    left: 331px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .plan-details {
+    font-family: HK Grotesk;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 31.27px;
+    text-align: left;
+    width: 125px;
+    height: 31px;
+    top: 389px;
+    left: 165px;
+    gap: 0px;
+    opacity: 0px;
+    color: #94a3b8;
+  }
+
+  .premium {
+    font-family: HK Grotesk;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 31.27px;
+    text-align: left;
+    height: 31px;
+    top: 389px;
+    left: 331px;
+    gap: 0px;
+    opacity: 0px;
+    color: #1e293b;
+    margin-left: 20px;
+  }
+
+  .video-resolution {
+    width: 72px;
+    height: 27px;
+    top: 391px;
+    left: 443px;
+    padding: 2px 4px 2px 4px;
+    gap: 10px;
+    border-radius: 2px;
+    opacity: 0px;
+    border: 1px solid #1e293b;
+    font-family: HK Grotesk;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 23.45px;
+    text-align: left;
+    color: #1e293b;
+  }
+
+  .account-footer-social-contacts {
+    width: 145px;
+    height: 21px;
+    top: 1231px;
+    left: 648px;
+    gap: 0px;
+    opacity: 0px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .account-icons {
+    font-family: Font Awesome 5 Brands;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20.7px;
+    text-align: center;
+    width: 21px;
+    height: 21px;
+    top: 899px;
+    left: 771px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  .account-footer-contact-us {
+    font-family: HK Grotesk;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+    width: 80px;
+    height: 24px;
+    top: 1268px;
+    left: 680px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
   .logout-button {
     background: #e50914;
     width: 89px;
@@ -430,12 +414,9 @@
     gap: 10px;
     border-radius: 4px;
     opacity: 0px;
-    font-family: HK Grotesk;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;
-    text-align: center;
-    color: #ffffff;
     border: none;
     outline: none;
     cursor: pointer;

@@ -8,14 +8,6 @@
   align-items: center;
 }
 
-@media screen and (max-width: 768px) {
-  .not-found-container {
-    background-image: url('https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719486577/snow-removal-machine-working-high-ski-slope-snowstorm_454047-2149_1_1_e9fazt.jpg');
-    background-size: cover;
-    height: 100vh;
-  }
-}
-
 .not-found-heading {
   width: 686px;
   height: 125px;
@@ -30,21 +22,6 @@
   text-align: center;
   color: #ffffff;
   margin-bottom: 0px;
-}
-@media screen and (max-width: 768px) {
-  .not-found-heading {
-    width: 286px;
-    height: 52px;
-    top: 226px;
-    left: 37px;
-    gap: 0px;
-    opacity: 0px;
-    font-family: HK Grotesk;
-    font-size: 40px;
-    font-weight: 700;
-    line-height: 52.12px;
-    text-align: center;
-  }
 }
 
 .not-found-des {
@@ -61,21 +38,6 @@
   text-align: center;
   color: #ffffff;
   margin-top: 0px;
-}
-@media screen and (max-width: 768px) {
-  .not-found-des {
-    width: 296px;
-    height: 63px;
-    top: 294px;
-    left: 32px;
-    gap: 0px;
-    opacity: 0px;
-    font-family: HK Grotesk;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 20.85px;
-    text-align: center;
-  }
 }
 
 .home-button {
@@ -96,18 +58,30 @@
   outline: none;
   cursor: pointer;
 }
+
 @media screen and (max-width: 768px) {
+  .not-found-container {
+    background-image: url('https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719486577/snow-removal-machine-working-high-ski-slope-snowstorm_454047-2149_1_1_e9fazt.jpg');
+  }
+  .not-found-heading {
+    width: 286px;
+    height: 52px;
+    top: 226px;
+    left: 37px;
+    font-size: 40px;
+    line-height: 52.12px;
+  }
+  .not-found-des {
+    width: 296px;
+    height: 63px;
+    top: 294px;
+    left: 32px;
+    font-size: 16px;
+    line-height: 20.85px;
+  }
   .home-button {
     width: 127px;
-    height: Hug 40px;
+    height: 40px;
     padding: 8px 24px 8px 24px;
-    gap: 8px;
-    border-radius: 4px;
-    opacity: 0px;
-    font-family: HK Grotesk;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 24px;
-    text-align: left;
   }
 }

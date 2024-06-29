@@ -1,4 +1,3 @@
-// import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
 import Cookies from 'js-cookie'
 
 import Header from '../Header'
