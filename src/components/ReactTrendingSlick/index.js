@@ -70,10 +70,7 @@ class ReactTrendingSlick extends Component {
     if (response.ok === true) {
       const fetchedData = await response.json()
 
-      const data = fetchedData.results.map(eachItem => ({
-        id: eachItem.id,
-        posterPath: eachItem.poster_path,
-      }))
+      const data = fetchedData.results
 
       this.setState({trendingMovies: data, apiStatus: apiStatusValue.success})
     } else {
@@ -86,20 +83,17 @@ class ReactTrendingSlick extends Component {
 
     return (
       <Slider {...settings} className="slider-container">
-        {trendingMovies.map(eachLogo => {
-          const {id, posterPath, title} = eachLogo
-          return (
-            <div className="slick-item" key={id}>
-              <Link to={`/movies/${id}`}>
-                <img
-                  className="trending-logo-image"
-                  src={posterPath}
-                  alt={title}
-                />
-              </Link>
-            </div>
-          )
-        })}
+        {trendingMovies.map(eachMovie => (
+          <div className="slick-item" key={eachMovie.id}>
+            <Link to={`/movies/${eachMovie.id}`}>
+              <img
+                className="trending-logo-image"
+                src={eachMovie.poster_path}
+                alt={eachMovie.title}
+              />
+            </Link>
+          </div>
+        ))}
       </Slider>
     )
   }
@@ -151,12 +145,7 @@ class ReactTrendingSlick extends Component {
   }
 
   render() {
-    return (
-      <div className="trending-main-container">
-        <h1 className="trending-movies">Trending Now</h1>
-        <div className="slick-trending-container">{this.renderViews()}</div>
-      </div>
-    )
+    return <div className="slick-trending-container">{this.renderViews()}</div>
   }
 }
 

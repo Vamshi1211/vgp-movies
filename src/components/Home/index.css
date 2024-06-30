@@ -46,7 +46,6 @@
   line-height: 20.85px;
   text-align: left;
   color: #ffffff;
-  width: 275px;
   top: 255px;
   left: 32px;
   gap: 0px;
@@ -54,7 +53,6 @@
 }
 @media screen and (min-width: 320px) {
   .title-description {
-    width: 296px;
     font-size: 16px;
   }
 }
@@ -208,6 +206,24 @@
   align-items: center;
 }
 
+.slick-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.slick-heading {
+  font-family: HK Grotesk;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20.85px;
+  text-align: left;
+  color: #ffffff;
+  align-self: flex-start;
+}
+
 @media screen and (min-width: 768px) {
   .home-top-container {
     height: 605px;
@@ -225,7 +241,7 @@
   .title-description {
     font-size: 20px;
     line-height: 26.06px;
-    width: 443px;
+    width: 80%;
     top: 309px;
     left: 164px;
   }
@@ -267,5 +283,9 @@
     width: 94px;
     height: 32px;
     padding: 4px 16px 4px 16px;
+  }
+  .slick-heading {
+    font-size: 24px;
+    line-height: 31.27px;
   }
 }

@@ -1,6 +1,6 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
-import {v4 as uuidv4} from 'uuid'
+
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
@@ -43,14 +43,11 @@ class Popular extends Component {
     if (response.ok === true) {
       const fetchedData = await response.json()
 
-      const data = fetchedData.results.map(eachItem => ({
-        id: eachItem.id,
-        posterPath: eachItem.poster_path,
-        title: eachItem.title,
-        uniqueId: uuidv4(),
-      }))
+      const data = fetchedData.results
 
       this.setState({popularMovies: data, apiStatus: apiStatusValue.success})
+    } else {
+      this.setState({apiStatus: apiStatusValue.failure})
     }
   }
 
@@ -65,17 +62,17 @@ class Popular extends Component {
 
     return (
       <ul className="popular-list-container">
-        {popularMovies.map(eachItem => {
-          const {id, posterPath, title, uniqueId} = eachItem
-
-          return (
-            <li className="popular-list-item">
-              <Link to={`/movies/${id}`} key={uniqueId}>
-                <img src={posterPath} alt={title} className="popular-image" />
-              </Link>
-            </li>
-          )
-        })}
+        {popularMovies.map(eachMovie => (
+          <li className="popular-list-item">
+            <Link to={`/movies/${eachMovie.id}`} key={eachMovie.id}>
+              <img
+                src={eachMovie.poster_path}
+                alt={eachMovie.title}
+                className="popular-image"
+              />
+            </Link>
+          </li>
+        ))}
       </ul>
     )
   }
@@ -121,7 +118,7 @@ class Popular extends Component {
 
   render() {
     return (
-      <div className="popular-main-container" data-testid="popularItem">
+      <div className="popular-main-container">
         <Header />
         {this.renderViews()}
         <Footer />

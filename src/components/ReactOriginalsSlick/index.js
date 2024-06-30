@@ -70,10 +70,7 @@ class ReactOriginalsSlick extends Component {
     if (response.ok === true) {
       const fetchedData = await response.json()
 
-      const data = fetchedData.results.map(eachItem => ({
-        id: eachItem.id,
-        posterPath: eachItem.poster_path,
-      }))
+      const data = fetchedData.results
 
       this.setState({originalsMovies: data, apiStatus: apiStatusValue.success})
     } else {
@@ -85,21 +82,18 @@ class ReactOriginalsSlick extends Component {
     const {originalsMovies} = this.state
 
     return (
-      <Slider {...settings}>
-        {originalsMovies.map(eachLogo => {
-          const {id, posterPath, title} = eachLogo
-          return (
-            <div className="slick-item" key={id}>
-              <Link to={`/movies/${id}`}>
-                <img
-                  className="originals-logo-image"
-                  src={posterPath}
-                  alt={title}
-                />
-              </Link>
-            </div>
-          )
-        })}
+      <Slider {...settings} className="slick-container">
+        {originalsMovies.map(eachMovie => (
+          <div className="slick-item" key={eachMovie.id}>
+            <Link to={`/movies/${eachMovie.id}`}>
+              <img
+                className="originals-logo-image"
+                src={eachMovie.poster_path}
+                alt={eachMovie.title}
+              />
+            </Link>
+          </div>
+        ))}
       </Slider>
     )
   }
@@ -110,7 +104,7 @@ class ReactOriginalsSlick extends Component {
     </div>
   )
 
-  onClickRetry = () => {
+  onClickOriginalVideosRetry = () => {
     this.getOriginalVideos()
   }
 
@@ -127,7 +121,7 @@ class ReactOriginalsSlick extends Component {
       <button
         type="button"
         className="original-try-again"
-        onClick={this.onClickRetry}
+        onClick={this.onClickOriginalVideosRetry}
       >
         Try Again
       </button>
@@ -150,12 +144,7 @@ class ReactOriginalsSlick extends Component {
   }
 
   render() {
-    return (
-      <div className="originals-main-container">
-        <h1 className="originals-movies">Originals</h1>
-        <div className="slick-originals-container">{this.renderViews()}</div>
-      </div>
-    )
+    return <div className="slick-originals-container">{this.renderViews()}</div>
   }
 }
 

@@ -133,7 +133,7 @@ class Home extends Component {
   }
 
   render() {
-    const {topRatedMovies} = this.state
+    // const {topRatedMovies} = this.state
 
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken === undefined) {
@@ -143,12 +143,17 @@ class Home extends Component {
 
     return (
       <div className="home-container">
-        {topRatedMovies.length <= 0 && <Header />}
         {this.renderHomeViews()}
         <div className="body-container">
           <div className="slice-container">
-            <ReactTrendingSlick />
-            <ReactOriginalsSlick />
+            <div className="slick-main-container">
+              <h1 className="slick-heading">Trending Now</h1>
+              <ReactTrendingSlick />
+            </div>
+            <div className="slick-main-container">
+              <h1 className="slick-heading">Originals</h1>
+              <ReactOriginalsSlick />
+            </div>
           </div>
         </div>
         <Footer />

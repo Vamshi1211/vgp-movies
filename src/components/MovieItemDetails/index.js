@@ -62,6 +62,8 @@ class MovieItemDetails extends Component {
       }
 
       this.setState({movieDetails: data, apiStatus: apiStatusValue.success})
+    } else {
+      this.setState({apiStatus: apiStatusValue.failure})
     }
   }
 

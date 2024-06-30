@@ -14,12 +14,11 @@
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 40px;
-  opacity: 0.6;
 }
 
 .header-top-container {
   width: 90%;
-  background-color: none;
+  background-color: transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;

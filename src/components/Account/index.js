@@ -4,8 +4,8 @@ import Footer from '../Footer'
 import './index.css'
 
 const Account = props => {
-  const username = localStorage.getItem('username')
-  const password = localStorage.getItem('password')
+  //   const username = localStorage.getItem('username')
+  //   const password = localStorage.getItem('password')
 
   const onClickLogout = () => {
     const {history} = props
@@ -22,10 +22,8 @@ const Account = props => {
         <div className="account-information-container">
           <p className="membership">Member ship</p>
           <div className="profile-info-container">
-            <p className="g-mail">{username}</p>
-            <p className="password-value">
-              Password: {'*'.repeat(password.length)}
-            </p>
+            <p className="g-mail">rahul</p>
+            <p className="password-value">Password: **********</p>
           </div>
         </div>
         <hr className="horizontal-line" />

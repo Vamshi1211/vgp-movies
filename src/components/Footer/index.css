@@ -3,8 +3,8 @@
   flex-direction: column;
   align-self: center;
   align-items: center;
-  margin-bottom: 40px;
-  margin-top: 40px;
+  padding-bottom: 40px;
+  padding-top: 40px;
 }
 
 .footer-social-contacts {

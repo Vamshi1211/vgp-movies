@@ -52,7 +52,7 @@ class Header extends Component {
                     <img
                       src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719162886/Group_7399_1_kzymdq.png"
                       alt="website logo"
-                      className="title-image"
+                      //   className="title-image"
                     />
                   </Link>
                   <ul className="navbar-container">
@@ -72,9 +72,11 @@ class Header extends Component {
                         value={searchInput}
                         onChange={onChangeSearchInput}
                         placeholder="Search"
+                        type="search"
                       />
                       <button
                         type="button"
+                        testid="searchButton"
                         className="search-button-element"
                         onClick={onClickSearchButton}
                       >
@@ -85,8 +87,8 @@ class Header extends Component {
                     <Link to="/search">
                       <button
                         type="button"
-                        data-testid="searchButton"
                         className="search-button"
+                        testid="searchButton"
                       >
                         <HiOutlineSearch className="search-icon" />
                       </button>

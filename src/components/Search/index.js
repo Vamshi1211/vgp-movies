@@ -45,10 +45,7 @@ class Search extends Component {
 
     if (response.ok === true) {
       const fetchedData = await response.json()
-      const data = fetchedData.results.map(eachItem => ({
-        id: eachItem.id,
-        posterPath: eachItem.poster_path,
-      }))
+      const data = fetchedData.results
 
       this.setState({searchResults: data, apiStatus: apiStatusValue.success})
     } else {
@@ -71,21 +68,17 @@ class Search extends Component {
       <>
         {searchResults.length > 0 ? (
           <ul className="search-list-container">
-            {searchResults.map(eachResult => {
-              const {id, posterPath, title} = eachResult
-
-              return (
-                <li className="search-list-item" key={id}>
-                  <Link to={`/movies/${id}`}>
-                    <img
-                      src={posterPath}
-                      alt={title}
-                      className="search-poster"
-                    />
-                  </Link>
-                </li>
-              )
-            })}
+            {searchResults.map(eachResult => (
+              <li className="search-list-item">
+                <Link to={`/movies/${eachResult.id}`} key={eachResult.id}>
+                  <img
+                    src={eachResult.poster_path}
+                    alt={eachResult.title}
+                    className="search-poster"
+                  />
+                </Link>
+              </li>
+            ))}
           </ul>
         ) : (
           <div className="no-search-result-container">
