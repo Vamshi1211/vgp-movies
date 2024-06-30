@@ -92,12 +92,14 @@ class MovieItemDetails extends Component {
       englishName: eachItem.english_name,
     }))
 
-    const hours = Math.round(runtime / 60)
-    const mins = runtime % 60
+    const hours = Math.floor(runtime / 60)
+    const mins = Math.floor(runtime) % 60
 
     const year = format(new Date(releaseDate), 'yyyy')
     const month = format(new Date(releaseDate), 'MMMM')
     const date = format(new Date(releaseDate), 'dd')
+
+    const duration = `${hours}h ${mins}m`
 
     return (
       <>
@@ -113,7 +115,7 @@ class MovieItemDetails extends Component {
           <div className="movie-details-text-container">
             <h1 className="movie-title">{title}</h1>
             <div className="duration-rated-release-date-container">
-              <p className="run-time">{`${hours}h ${mins}m`}</p>
+              <p className="run-time">{duration}</p>
               <p className="certificate">{adult === true ? 'A' : 'U/A'}</p>
               <p className="release-year">{year}</p>
             </div>
@@ -139,7 +141,7 @@ class MovieItemDetails extends Component {
           </ul>
 
           <ul className="languages-container">
-            <p className="languages-available">Audio Available</p>
+            <h1 className="languages-available">Audio Available</h1>
             {updatedLanguages.map(eachItem => {
               const {uniqueIdV1, englishName} = eachItem
               return (
@@ -203,10 +205,6 @@ class MovieItemDetails extends Component {
     </div>
   )
 
-  onClickRetry = () => {
-    this.getMovieDetails()
-  }
-
   renderFailureView = () => (
     <div className="movie-details-failure-container">
       <img
@@ -220,7 +218,7 @@ class MovieItemDetails extends Component {
       <button
         type="button"
         className="movie-details-try-again"
-        onClick={this.onClickRetry}
+        onClick={this.getMovieDetails}
       >
         Try Again
       </button>

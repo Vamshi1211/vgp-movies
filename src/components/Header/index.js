@@ -36,8 +36,8 @@ class Header extends Component {
             onClickSearch()
           }
 
-          /* const opacityValue =
-            path === '/' || path.includes('/movies/') ? '0.6' : '1' */
+          const opacityValue =
+            path === '/' || path.includes('/movies/') ? '0.6' : '1'
 
           const hamburgerBg =
             path === '/' || path.includes('/movies/') ? '1' : '1'
@@ -45,7 +45,7 @@ class Header extends Component {
           /* const heightValue = isClickedHamburger ? '100px' : '75px' */
 
           return (
-            <nav className="main-bg-container">
+            <nav className="main-bg-container" style={{opacity: opacityValue}}>
               <div className="header-top-container">
                 <div className="title-and-nav-container">
                   <Link to="/">
@@ -75,7 +75,6 @@ class Header extends Component {
                       />
                       <button
                         type="button"
-                        data-testid="searchButton"
                         className="search-button-element"
                         onClick={onClickSearchButton}
                       >

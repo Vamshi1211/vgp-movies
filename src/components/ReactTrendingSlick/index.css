@@ -58,6 +58,11 @@
 /* You can change the CSS color to style the Next and 
 Previous Arrow buttons according to your project */
 
+.slider-container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
 .slick-prev:before,
 .slick-next:before {
   color: #ffffff;

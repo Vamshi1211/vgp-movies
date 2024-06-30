@@ -1,6 +1,8 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
 import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 
@@ -83,7 +85,7 @@ class ReactTrendingSlick extends Component {
     const {trendingMovies} = this.state
 
     return (
-      <Slider {...settings}>
+      <Slider {...settings} className="slider-container">
         {trendingMovies.map(eachLogo => {
           const {id, posterPath, title} = eachLogo
           return (

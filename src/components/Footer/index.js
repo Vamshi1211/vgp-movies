@@ -3,12 +3,23 @@ import './index.css'
 
 const Footer = () => (
   <div className="footer-container">
-    <div className="footer-social-contacts">
-      <FaGoogle className="icons" />
-      <FaTwitter className="icons" />
-      <FaInstagram className="icons" />
-      <FaYoutube className="icons" />
-    </div>
+    <ul className="footer-social-contacts">
+      <li className="icons">
+        <FaGoogle />
+      </li>
+
+      <li className="icons">
+        <FaTwitter />
+      </li>
+
+      <li className="icons">
+        <FaInstagram />
+      </li>
+
+      <li className="icons">
+        <FaYoutube />
+      </li>
+    </ul>
     <p className="footer-contact-us">Contact us</p>
   </div>
 )

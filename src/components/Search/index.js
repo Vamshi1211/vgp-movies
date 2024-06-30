@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 import Header from '../Header'
+// import Footer from '../Footer'
 
 import MoviesContext from '../../context/MoviesContext'
 import './index.css'
@@ -21,9 +22,9 @@ class Search extends Component {
     searchResults: [],
   }
 
-  componentDidMount() {
-    this.getSearchResults()
-  }
+  //   componentDidMount() {
+  //     this.getSearchResults()
+  //   }
 
   getSearchResults = async () => {
     const {searchInput} = this.state
@@ -55,7 +56,7 @@ class Search extends Component {
     }
   }
 
-  renderLoadingView = () => (
+  renderLoadingSearchView = () => (
     <>
       <div className="search-loader-container" testid="loader">
         <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
@@ -106,7 +107,7 @@ class Search extends Component {
     this.getSearchResults()
   }
 
-  renderFailureView = () => (
+  renderFailureSearchView = () => (
     <div className="search-failure-container">
       <img
         src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719224516/Icon_j5mhse.png"
@@ -126,16 +127,16 @@ class Search extends Component {
     </div>
   )
 
-  renderViews = () => {
+  renderSearchViews = () => {
     const {apiStatus} = this.state
 
     switch (apiStatus) {
       case apiStatusValue.inProgress:
-        return this.renderLoadingView()
+        return this.renderLoadingSearchView()
       case apiStatusValue.success:
         return this.renderSearchView()
       case apiStatusValue.failure:
-        return this.renderFailureView()
+        return this.renderFailureSearchView()
 
       default:
         return null
@@ -163,7 +164,7 @@ class Search extends Component {
       >
         <div className="search-bg-container">
           <Header />
-          {this.renderViews()}
+          {this.renderSearchViews()}
         </div>
       </MoviesContext.Provider>
     )

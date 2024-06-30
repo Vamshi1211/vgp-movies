@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
+import {v4 as uuidv4} from 'uuid'
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
@@ -45,6 +46,8 @@ class Popular extends Component {
       const data = fetchedData.results.map(eachItem => ({
         id: eachItem.id,
         posterPath: eachItem.poster_path,
+        title: eachItem.title,
+        uniqueId: uuidv4(),
       }))
 
       this.setState({popularMovies: data, apiStatus: apiStatusValue.success})
@@ -63,17 +66,16 @@ class Popular extends Component {
     return (
       <ul className="popular-list-container">
         {popularMovies.map(eachItem => {
-          const {id, posterPath, title} = eachItem
+          const {id, posterPath, title, uniqueId} = eachItem
 
           return (
-            <li key={id} className="popular-list-item">
-              <Link to={`/movies/${id}`}>
+            <li className="popular-list-item">
+              <Link to={`/movies/${id}`} key={uniqueId}>
                 <img src={posterPath} alt={title} className="popular-image" />
               </Link>
             </li>
           )
         })}
-        <Footer />
       </ul>
     )
   }
@@ -122,6 +124,7 @@ class Popular extends Component {
       <div className="popular-main-container" data-testid="popularItem">
         <Header />
         {this.renderViews()}
+        <Footer />
       </div>
     )
   }

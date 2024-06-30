@@ -104,6 +104,7 @@
 
 .plan-details-container {
   display: flex;
+  align-items: center;
 }
 
 .plan-details {
@@ -134,11 +135,10 @@
   opacity: 0px;
   color: #1e293b;
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 .video-resolution {
-  width: 64px;
-  height: 22px;
   top: 264px;
   left: 222px;
   padding: 2px 4px 2px 4px;
@@ -347,7 +347,6 @@
   }
 
   .video-resolution {
-    width: 72px;
     height: 27px;
     top: 391px;
     left: 443px;

@@ -19,6 +19,9 @@ class Login extends Component {
     const {history} = this.props
     Cookies.set('jwt_token', jwtToken, {expires: 30})
     history.replace('/')
+    const {username, password} = this.state
+    localStorage.setItem('username', username)
+    localStorage.setItem('password', password)
   }
 
   onSubmitFailure = errorMsg => {
@@ -30,8 +33,6 @@ class Login extends Component {
     const {username, password} = this.state
 
     const userData = {username, password}
-
-    localStorage.setItem('credentials', JSON.stringify(userData))
 
     const url = 'https://apis.ccbp.in/login'
     const options = {

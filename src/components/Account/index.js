@@ -1,42 +1,38 @@
 import Cookies from 'js-cookie'
-
 import Header from '../Header'
 import Footer from '../Footer'
-
 import './index.css'
 
 const Account = props => {
+  const username = localStorage.getItem('username')
+  const password = localStorage.getItem('password')
+
   const onClickLogout = () => {
     const {history} = props
     history.replace('/login')
     Cookies.remove('jwt_token')
   }
 
-  const getCredentials = localStorage.getItem('credentials')
-
-  const parsedData = JSON.parse(getCredentials)
-
   return (
-    <div className="account-main-container" data-testid="account">
+    <div className="account-main-container">
       <Header />
       <div className="account-container">
         <h1 className="account-heading">Account</h1>
         <hr className="horizontal-line" />
         <div className="account-information-container">
-          <p className="membership">Member ship </p>
+          <p className="membership">Member ship</p>
           <div className="profile-info-container">
-            <p className="g-mail">{parsedData.username}</p>
+            <p className="g-mail">{username}</p>
             <p className="password-value">
-              Password : {'*'.repeat(parsedData.password.length)}
+              Password: {'*'.repeat(password.length)}
             </p>
           </div>
         </div>
         <hr className="horizontal-line" />
         <div className="plan-details-container">
-          <p className="plan-details">Plan details </p>
-          <p className="premium">
-            Premium <span className="video-resolution">Ultra HD</span>
-          </p>
+          <p className="plan-details">Plan details</p>
+          <p className="premium">Premium</p>
+          <p className="video-resolution">Ultra HD</p>
         </div>
         <hr className="horizontal-line" />
         <button type="button" className="logout-button" onClick={onClickLogout}>

@@ -67,59 +67,30 @@ class Home extends Component {
 
     return (
       <>
-        {topRatedMovies < 0 ? (
-          <div className="something-went-wrong">
-            <img
-              src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719226643/Background-Complete_rebzom.jpg"
-              alt="failure view"
-            />
-            <p className="failure-des">
-              Something went wrong. Please try againSomething went wrong. Please
-              try again
-            </p>
-            <button
-              type="button"
-              className="try-again"
-              onClick={this.onClickRetry}
-            >
-              Try Again
+        <div
+          className="home-top-container"
+          style={{
+            backgroundImage: `url(${randomMovie.backdropPath})`,
+            width: '100%',
+            backgroundSize: 'cover',
+          }}
+        >
+          <Header />
+
+          <div className="text-container">
+            <h1 className="title-name">{randomMovie.title}</h1>
+            <p className="title-description">{randomMovie.overview}</p>
+            <button type="button" className="play-button">
+              Play
             </button>
           </div>
-        ) : (
-          <>
-            <div
-              className="home-top-container"
-              style={{
-                backgroundImage: `url(${randomMovie.backdropPath})`,
-                width: '100%',
-                backgroundSize: 'cover',
-              }}
-            >
-              <Header />
-
-              <div className="text-container">
-                <h1 className="title-name">{randomMovie.title}</h1>
-                <p className="title-description">{randomMovie.overview}</p>
-                <button type="button" className="play-button">
-                  Play
-                </button>
-              </div>
-              <div className="bottom-linear-container">.</div>
-            </div>
-            <div className="body-container">
-              <div className="slice-container">
-                <ReactTrendingSlick />
-                <ReactOriginalsSlick />
-              </div>
-            </div>
-            <Footer />
-          </>
-        )}
+          <div className="bottom-linear-container">.</div>
+        </div>
       </>
     )
   }
 
-  renderLoadingView = () => (
+  renderLoadingHomeView = () => (
     <div className="loader-container" testid="loader">
       <Loader type="TailSpin" color="#D81F26" height={50} width={50} />
     </div>
@@ -129,7 +100,7 @@ class Home extends Component {
     this.getTopRatedMovies()
   }
 
-  renderFailureView = () => (
+  renderFailureHomeView = () => (
     <div className="failure-container">
       <img
         src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719224516/Icon_j5mhse.png"
@@ -145,16 +116,16 @@ class Home extends Component {
     </div>
   )
 
-  renderViews = () => {
+  renderHomeViews = () => {
     const {apiStatus} = this.state
 
     switch (apiStatus) {
       case apiStatusValue.inProgress:
-        return this.renderLoadingView()
+        return this.renderLoadingHomeView()
       case apiStatusValue.success:
         return this.renderHomeView()
       case apiStatusValue.failure:
-        return this.renderFailureView()
+        return this.renderFailureHomeView()
 
       default:
         return null
@@ -173,10 +144,33 @@ class Home extends Component {
     return (
       <div className="home-container">
         {topRatedMovies.length <= 0 && <Header />}
-        {this.renderViews()}
+        {this.renderHomeViews()}
+        <div className="body-container">
+          <div className="slice-container">
+            <ReactTrendingSlick />
+            <ReactOriginalsSlick />
+          </div>
+        </div>
+        <Footer />
       </div>
     )
   }
 }
 
 export default Home
+
+//  {topRatedMovies < 0 ? (
+//           <div className="something-went-wrong">
+//             <img
+//               src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719226643/Background-Complete_rebzom.jpg"
+//               alt="failure view"
+//             />
+//             <p className="failure-des">
+//               Something went wrong. Please try againSomething went wrong. Please
+//               try again
+//             </p>
+//             <button type="button" className="try-again">
+//               Try Again
+//             </button>
+//           </div>
+//         ) :
