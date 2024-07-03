@@ -17,7 +17,6 @@
   left: 32px;
   gap: 0px;
   border-radius: 8px;
-  opacity: 0px;
 }
 
 @media screen and (min-width: 768px) {
@@ -28,6 +27,5 @@
     left: 165px;
     gap: 0px;
     border-radius: 8px;
-    opacity: 0px;
   }
 }

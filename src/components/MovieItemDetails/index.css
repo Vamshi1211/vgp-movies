@@ -10,7 +10,6 @@
   width: 100%;
   height: 427px;
   gap: 0px;
-  opacity: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,7 +18,7 @@
 .movie-details-text-container {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 95%;
 }
 
 .movie-title {
@@ -33,7 +32,6 @@
   top: 159px;
   left: 32px;
   gap: 0px;
-  opacity: 0px;
   margin-bottom: 6px;
 }
 
@@ -53,7 +51,6 @@
   top: 215px;
   left: 32px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
   margin-right: 15px;
 }
@@ -73,7 +70,6 @@
   gap: 10px;
   border-radius: 2px;
   border: 1px 0px 0px 0px;
-  opacity: 0px;
   border: 1px solid #ffffff;
   margin-right: 15px;
 }
@@ -89,7 +85,6 @@
   top: 215px;
   left: 170px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
 }
 
@@ -102,7 +97,6 @@
   top: 255px;
   left: 32px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
   margin-top: 6px;
 }
@@ -115,7 +109,6 @@
   padding: 8px 24px 8px 24px;
   gap: 8px;
   border-radius: 4px;
-  opacity: 0px;
   background: #ffffff;
   font-family: HK Grotesk;
   font-size: 14px;
@@ -134,7 +127,6 @@
   height: 166.23px;
   top: 334.77px;
   gap: 0px;
-  opacity: 0px;
   background: linear-gradient(
     180deg,
     rgba(0, 0, 0, 0) 0%,
@@ -184,7 +176,6 @@
   top: 414px;
   left: 32px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .languages-container {
@@ -199,7 +190,6 @@
   top: 414px;
   left: 117px;
   gap: 0px;
-  opacity: 0px;
   font-family: HK Grotesk;
   font-size: 14px;
   font-weight: 600;
@@ -239,7 +229,6 @@
   top: 414px;
   left: 246px;
   gap: 0px;
-  opacity: 0px;
   font-family: HK Grotesk;
   font-size: 14px;
   font-weight: 600;
@@ -261,7 +250,6 @@
   top: 439px;
   left: 246px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
   margin-bottom: 0px;
 }
@@ -283,7 +271,6 @@
   top: 463px;
   left: 246px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .rating-avg-item {
@@ -300,7 +287,6 @@
   top: 629px;
   left: 735px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .budget-release-date-container {
@@ -326,7 +312,6 @@
   top: 532px;
   left: 32px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .budget-item-container {
@@ -353,7 +338,6 @@
   top: 581px;
   left: 32px;
   gap: 0px;
-  opacity: 0px;
   font-family: HK Grotesk;
   font-size: 14px;
   font-weight: 600;
@@ -375,7 +359,6 @@
   top: 629px;
   left: 1025px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
 }
 
@@ -394,7 +377,6 @@
   top: 650px;
   left: 32px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
 }
 
@@ -422,7 +404,6 @@
   left: 32px;
   gap: 0px;
   border-radius: 4px;
-  opacity: 0px;
 }
 
 .movie-details-failure-image {
@@ -432,7 +413,6 @@
   left: 169px;
   padding: 2px 1px 3px 1px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .movie-details-failure-description {
@@ -446,7 +426,6 @@
   top: 178px;
   left: 73px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
 }
 
@@ -463,7 +442,6 @@
   padding: 2px 12px 2px 12px;
   gap: 8px;
   border-radius: 4px;
-  opacity: 0px;
   outline: none;
   cursor: pointer;
 }
@@ -653,5 +631,4 @@
   width: 40%;
   height: 501px;
   gap: 0px;
-  opacity: 0px;
 } */

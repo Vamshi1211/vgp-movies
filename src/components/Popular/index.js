@@ -1,5 +1,6 @@
 import {Component} from 'react'
 import {Link} from 'react-router-dom'
+// import {BsArrowLeftSquare} from 'react-icons/bs'
 
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
@@ -63,7 +64,7 @@ class Popular extends Component {
     return (
       <ul className="popular-list-container">
         {popularMovies.map(eachMovie => (
-          <li className="popular-list-item">
+          <li className="popular-list-item" key={eachMovie.id}>
             <Link to={`/movies/${eachMovie.id}`} key={eachMovie.id}>
               <img
                 src={eachMovie.poster_path}

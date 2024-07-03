@@ -7,6 +7,7 @@ import Footer from '../Footer'
 import Header from '../Header'
 import ReactTrendingSlick from '../ReactTrendingSlick'
 import ReactOriginalsSlick from '../ReactOriginalsSlick'
+import TopRated from '../TopRated'
 
 import './index.css'
 
@@ -19,7 +20,7 @@ const apiStatusValue = {
 
 class Home extends Component {
   state = {
-    topRatedMovies: [],
+    originalMovies: [],
     apiStatus: apiStatusValue.initial,
   }
 
@@ -48,33 +49,38 @@ class Home extends Component {
         backdropPath: eachItem.backdrop_path,
         title: eachItem.title,
         overview: eachItem.overview,
+        posterPath: eachItem.poster_path,
       }))
 
-      this.setState({topRatedMovies: data, apiStatus: apiStatusValue.success})
+      this.setState({originalMovies: data, apiStatus: apiStatusValue.success})
     } else {
       this.setState({apiStatus: apiStatusValue.failure})
     }
   }
 
   renderHomeView = () => {
-    const {topRatedMovies} = this.state
+    const {originalMovies} = this.state
 
-    const randomNumber = Math.ceil(Math.random() * (topRatedMovies.length - 1))
+    const randomNumber = Math.ceil(Math.random() * (originalMovies.length - 1))
 
-    const randomMovie = topRatedMovies[randomNumber]
+    const randomMovie = originalMovies[randomNumber]
 
     // const opacityValue = path === '/' || path.includes('/movies/') ? '0.5' : '1'
 
+    const bgImage =
+      window.innerWidth > 768
+        ? randomMovie.backdropPath
+        : randomMovie.posterPath
+
+    const backgroundStyle = {
+      backgroundImage: `url(${bgImage})`,
+      width: '100%',
+      backgroundSize: 'cover',
+    }
+
     return (
       <>
-        <div
-          className="home-top-container"
-          style={{
-            backgroundImage: `url(${randomMovie.backdropPath})`,
-            width: '100%',
-            backgroundSize: 'cover',
-          }}
-        >
+        <div className="home-top-container" style={backgroundStyle}>
           <Header />
 
           <div className="text-container">
@@ -149,6 +155,10 @@ class Home extends Component {
             <div className="slick-main-container">
               <h1 className="slick-heading">Trending Now</h1>
               <ReactTrendingSlick />
+            </div>
+            <div className="top-rated-container">
+              <h1 className="slick-heading">Top Rated</h1>
+              <TopRated />
             </div>
             <div className="slick-main-container">
               <h1 className="slick-heading">Originals</h1>

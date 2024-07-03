@@ -6,44 +6,30 @@
 
 .trending-logo-image {
   width: 90px;
-  height: 130px;
+  height: 64px;
   top: 439px;
   left: 32px;
   gap: 0px;
   border-radius: 8px;
-  opacity: 0px;
   border-radius: 8px;
-  opacity: 0px;
   cursor: pointer;
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
-/* @media screen and (min-width: 576px) {
-  .trending-logo-image {
-    width: 80%;
-    height: 64px;
-    top: 439px;
-    left: 32px;
-    gap: 0px;
-    border-radius: 8px;
-    opacity: 0px;
-    border-radius: 8px;
-    opacity: 0px;
-    cursor: pointer;
-  }
-} */
+
+.trending-logo-image:hover {
+  transform: scale(1.2);
+  box-shadow: 2px 2px 10px hsla(0, 0%, 100%, 0.5411764705882353);
+}
 
 @media screen and (min-width: 992px) {
   .trending-logo-image {
     width: 100%;
-    height: 170px;
-    max-width: 190px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .trending-logo-image {
     width: 100%;
-    height: 170px;
-    max-width: 254px;
   }
 }
 
@@ -63,7 +49,6 @@ Previous Arrow buttons according to your project */
   top: 459px;
   left: 332px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .trending-loader-container {
@@ -73,7 +58,6 @@ Previous Arrow buttons according to your project */
   left: 32px;
   gap: 0px;
   border-radius: 4px;
-  opacity: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -91,7 +75,6 @@ Previous Arrow buttons according to your project */
   left: 32px;
   gap: 0px;
   border-radius: 4px;
-  opacity: 0px;
 }
 
 .trending-failure-image {
@@ -101,7 +84,6 @@ Previous Arrow buttons according to your project */
   left: 173px;
   padding: 1.33px 0.67px 2px 0.67px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .trending-failure-description {
@@ -115,7 +97,6 @@ Previous Arrow buttons according to your project */
   top: 383px;
   left: 91px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
 }
 
@@ -132,7 +113,6 @@ Previous Arrow buttons according to your project */
   padding: 4px 12px 4px 12px;
   gap: 8px;
   border-radius: 4px;
-  opacity: 0px;
   outline: none;
   cursor: pointer;
   border: none;
@@ -140,9 +120,13 @@ Previous Arrow buttons according to your project */
 
 @media screen and (min-width: 768px) {
   .trending-logo-image {
-    width: 100%;
+    width: 90%;
     height: 170px;
-    max-width: 145px;
+    margin-right: 10px;
+  }
+  .trending-logo-image:hover {
+    transform: scale(1.2);
+    box-shadow: 2px 2px 10px hsla(0, 0%, 100%, 0.5411764705882353);
   }
   .slick-prev:before,
   .slick-next:before {

@@ -3,7 +3,6 @@
   top: 1203px;
   left: 5458px;
   gap: 0px;
-  opacity: 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,14 +26,12 @@
   font-weight: 500;
   line-height: 28.13px;
   text-align: left;
-
   color: #131313;
   width: 90px;
   height: 28px;
   top: 107px;
   left: 32px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .horizontal-line {
@@ -44,7 +41,6 @@
   left: 32px;
   gap: 0px;
   border-radius: 10px;
-  opacity: 0px;
   background: #cbd5e1;
 }
 
@@ -58,14 +54,12 @@
   font-weight: 600;
   line-height: 23.45px;
   text-align: left;
-
   color: #94a3b8;
   width: 106px;
   height: 23px;
   top: 169px;
   left: 32px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .profile-info-container {
@@ -83,7 +77,6 @@
   top: 169px;
   left: 149px;
   gap: 0px;
-  opacity: 0px;
   color: #1e293b;
 }
 
@@ -99,7 +92,6 @@
   top: 196px;
   left: 149px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .plan-details-container {
@@ -118,7 +110,6 @@
   top: 265px;
   left: 32px;
   gap: 0px;
-  opacity: 0px;
   color: #94a3b8;
 }
 
@@ -132,7 +123,6 @@
   top: 265px;
   left: 149px;
   gap: 0px;
-  opacity: 0px;
   color: #1e293b;
   margin-left: 20px;
   margin-right: 20px;
@@ -145,7 +135,6 @@
   gap: 10px;
   border-radius: 2px;
   border: 1px;
-  opacity: 0px;
   border: 1px solid #1e293b;
   font-family: HK Grotesk;
   font-size: 14px;
@@ -159,7 +148,6 @@
   height: 221px;
   top: 803px;
   gap: 0px;
-  opacity: 0px;
   background: #181818;
   display: flex;
   flex-direction: column;
@@ -174,7 +162,6 @@
   top: 546px;
   left: 125px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -191,7 +178,6 @@
   top: 546px;
   left: 220px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .account-footer-contact-us {
@@ -205,7 +191,6 @@
   top: 576px;
   left: 151px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
 }
 
@@ -218,7 +203,6 @@
   padding: 8px 20px 8px 20px;
   gap: 10px;
   border-radius: 4px;
-  opacity: 0px;
   font-family: HK Grotesk;
   font-size: 16px;
   font-weight: 600;
@@ -243,6 +227,7 @@
     flex-direction: column;
     align-self: center;
     margin-top: 0px;
+    height: 70vh;
   }
 
   .account-heading {
@@ -257,7 +242,6 @@
     top: 167px;
     left: 165px;
     gap: 0px;
-    opacity: 0px;
   }
 
   .horizontal-line {
@@ -267,7 +251,6 @@
     left: 165px;
     gap: 0px;
     border-radius: 10px;
-    opacity: 0px;
     background: #cbd5e1;
   }
 
@@ -283,7 +266,6 @@
     top: 264px;
     left: 165px;
     gap: 0px;
-    opacity: 0px;
   }
 
   .g-mail {
@@ -297,7 +279,6 @@
     top: 264px;
     left: 331px;
     gap: 0px;
-    opacity: 0px;
     color: #1e293b;
   }
 
@@ -313,7 +294,6 @@
     top: 308px;
     left: 331px;
     gap: 0px;
-    opacity: 0px;
   }
 
   .plan-details {
@@ -327,7 +307,7 @@
     top: 389px;
     left: 165px;
     gap: 0px;
-    opacity: 0px;
+
     color: #94a3b8;
   }
 
@@ -341,7 +321,6 @@
     top: 389px;
     left: 331px;
     gap: 0px;
-    opacity: 0px;
     color: #1e293b;
     margin-left: 20px;
   }
@@ -353,7 +332,6 @@
     padding: 2px 4px 2px 4px;
     gap: 10px;
     border-radius: 2px;
-    opacity: 0px;
     border: 1px solid #1e293b;
     font-family: HK Grotesk;
     font-size: 18px;
@@ -369,7 +347,6 @@
     top: 1231px;
     left: 648px;
     gap: 0px;
-    opacity: 0px;
     color: #ffffff;
     display: flex;
     justify-content: space-between;
@@ -386,7 +363,6 @@
     top: 899px;
     left: 771px;
     gap: 0px;
-    opacity: 0px;
   }
 
   .account-footer-contact-us {
@@ -400,7 +376,6 @@
     top: 1268px;
     left: 680px;
     gap: 0px;
-    opacity: 0px;
   }
 
   .logout-button {
@@ -412,7 +387,6 @@
     padding: 8px 20px 8px 20px;
     gap: 10px;
     border-radius: 4px;
-    opacity: 0px;
     font-size: 16px;
     font-weight: 600;
     line-height: 24px;

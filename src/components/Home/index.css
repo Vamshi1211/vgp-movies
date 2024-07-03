@@ -9,14 +9,20 @@
 
 .home-top-container {
   background-size: cover;
-  width: 100%;
   height: 447px;
   gap: 0px;
-  opacity: 0px;
   padding-top: 0px;
   display: flex;
   flex-direction: column;
 }
+/* .mobile-top-container {
+  background-size: cover;
+  height: 447px;
+  gap: 0px;
+  padding-top: 0px;
+  display: flex;
+  flex-direction: column;
+} */
 
 .text-container {
   width: 80%;
@@ -36,7 +42,6 @@
   top: 200px;
   left: 32px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .title-description {
@@ -49,7 +54,6 @@
   top: 255px;
   left: 32px;
   gap: 0px;
-  opacity: 0px;
 }
 @media screen and (min-width: 320px) {
   .title-description {
@@ -63,7 +67,6 @@
   padding: 8px 24px 8px 24px;
   gap: 8px;
   border-radius: 4px;
-  opacity: 0px;
   color: #171f46;
   font-family: HK Grotesk;
   font-size: 14px;
@@ -89,7 +92,6 @@
   height: 162px;
   top: 443px;
   gap: 0px;
-  opacity: 0px;
   flex-grow: 1;
 }
 
@@ -116,7 +118,6 @@
   left: 32px;
   gap: 0px;
   border-radius: 4px;
-  opacity: 0px;
 }
 
 .failure-container {
@@ -131,7 +132,6 @@
   left: 32px;
   gap: 0px;
   border-radius: 4px;
-  opacity: 0px;
 }
 
 .failure-image {
@@ -141,7 +141,6 @@
   left: 169px;
   padding: 2px 1px 3px 1px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .failure-description {
@@ -155,7 +154,6 @@
   top: 178px;
   left: 73px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
 }
 
@@ -172,7 +170,6 @@
   padding: 2px 12px 2px 12px;
   gap: 8px;
   border-radius: 4px;
-  opacity: 0px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -189,7 +186,6 @@
   top: 615px;
   left: 505px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
 }
 
@@ -199,7 +195,6 @@
   top: 1203px;
   left: 10087px;
   gap: 0px;
-  opacity: 0px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -227,6 +222,9 @@
 @media screen and (min-width: 768px) {
   .home-top-container {
     height: 605px;
+  }
+  .mobile-top-container {
+    display: none;
   }
   .text-container {
     height: 300px;

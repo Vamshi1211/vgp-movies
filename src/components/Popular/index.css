@@ -11,7 +11,6 @@
   left: 8547px;
   padding: 0px 0px 472px 0px;
   gap: 0px;
-  opacity: 0px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +20,8 @@
 .popular-list-container {
   padding-left: 0px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   width: 90%;
   max-width: 1440px;
@@ -32,27 +31,20 @@
 
 .popular-list-item {
   list-style-type: none;
-  width: 90px;
-  height: 100px;
-  top: 125px;
-  left: 32px;
-  gap: 0px;
-  border-radius: 4px;
-  opacity: 0px;
-  margin-bottom: 20px;
-  cursor: pointer;
-  outline: none;
-  margin-right: 20px;
 }
 
 .popular-image {
-  width: 90px;
-  height: 100px;
-  top: 125px;
-  left: 32px;
+  height: 90px;
+  width: 100px;
   gap: 0px;
   border-radius: 4px;
-  opacity: 0px;
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+  margin: 20px;
+}
+
+.popular-image:hover {
+  transform: scale(1.07);
+  box-shadow: 2px 2px 10px hsla(0, 0%, 100%, 0.5411764705882353);
 }
 
 .popular-failure-container {
@@ -66,7 +58,6 @@
   left: 32px;
   gap: 0px;
   border-radius: 4px;
-  opacity: 0px;
 }
 
 .popular-failure-image {
@@ -76,7 +67,6 @@
   left: 173px;
   padding: 1.33px 0.67px 2px 0.67px;
   gap: 0px;
-  opacity: 0px;
 }
 
 .popular-failure-description {
@@ -90,7 +80,6 @@
   top: 383px;
   left: 91px;
   gap: 0px;
-  opacity: 0px;
   color: #ffffff;
 }
 
@@ -107,7 +96,6 @@
   padding: 4px 12px 4px 12px;
   gap: 8px;
   border-radius: 4px;
-  opacity: 0px;
   outline: none;
   cursor: pointer;
   border: none;
@@ -119,18 +107,15 @@
     margin-top: 40px;
   }
   .popular-list-item {
-    width: 255px;
-    height: 170px;
-    top: 135px;
-    left: 166px;
-    border-radius: 8px;
+    list-style-type: none;
   }
+
   .popular-image {
     width: 255px;
     height: 170px;
-    top: 135px;
-    left: 166px;
     border-radius: 8px;
+    transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+    margin: 15px;
   }
   .popular-failure-container {
     height: 170px;
