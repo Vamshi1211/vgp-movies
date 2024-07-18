@@ -12,6 +12,7 @@ const SimilarMovies = props => {
           src={eachMovie.poster_path}
           alt={eachMovie.title}
           className="similar-movie-image"
+          loading="lazy"
         />
       </li>
     </Link>

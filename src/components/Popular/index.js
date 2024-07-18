@@ -82,6 +82,7 @@ class Popular extends Component {
                   src={eachMovie.poster_path}
                   alt={eachMovie.title}
                   className="popular-image"
+                  loading="lazy"
                 />
               </Link>
             </li>
@@ -107,6 +108,7 @@ class Popular extends Component {
         src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719224516/Icon_j5mhse.png"
         alt="failure view"
         className="popular-failure-image"
+        loading="lazy"
       />
       <p className="popular-failure-description">
         Something went wrong. Please try again

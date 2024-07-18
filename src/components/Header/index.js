@@ -57,6 +57,7 @@ class Header extends Component {
                       src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719162886/Group_7399_1_kzymdq.png"
                       alt="website logo"
                       className="title-image"
+                      loading="lazy"
                     />
                   ) : (
                     <Link to="/">
@@ -64,6 +65,7 @@ class Header extends Component {
                         src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719162886/Group_7399_1_kzymdq.png"
                         alt="website logo"
                         className="title-image"
+                        loading="lazy"
                       />
                     </Link>
                   )}
@@ -109,7 +111,7 @@ class Header extends Component {
                         className="search-button"
                         testid="searchButton"
                       >
-                        <HiOutlineSearch className="search-icon" />
+                        <HiOutlineSearch className="search-icon" size={20} />
                       </button>
                     </Link>
                   )}
@@ -117,6 +119,7 @@ class Header extends Component {
                     <img
                       src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719203200/Avatar_tkuwnc.png"
                       alt="profile"
+                      loading="lazy"
                     />
                   </Link>
                   <button
@@ -128,6 +131,7 @@ class Header extends Component {
                       src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719396604/add-to-queue_1_i42cra.png"
                       alt="hamburger"
                       className="hamburger-icon"
+                      loading="lazy"
                     />
                   </button>
                 </div>
@@ -158,6 +162,7 @@ class Header extends Component {
                       src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719399324/Shape_eunvfg.png"
                       alt="cross"
                       className="cross-icon"
+                      loading="lazy"
                     />
                   </button>
                 </ul>

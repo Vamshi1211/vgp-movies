@@ -84,6 +84,7 @@ class Search extends Component {
                       src={eachResult.poster_path}
                       alt={eachResult.title}
                       className="search-poster"
+                      loading="lazy"
                     />
                   </Link>
                 </li>
@@ -102,6 +103,7 @@ class Search extends Component {
               src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719304094/Group_7394_yhycld.png"
               alt="no movies"
               className="no-search-result-image"
+              loading="lazy"
             />
             <p className="no-movies-des">
               Your search for {searchInput} did not find any matches.

@@ -90,6 +90,7 @@ class ReactOriginalsSlick extends Component {
                 className="originals-logo-image"
                 src={eachMovie.poster_path}
                 alt={eachMovie.title}
+                loading="lazy"
               />
             </Link>
           </div>
@@ -114,6 +115,7 @@ class ReactOriginalsSlick extends Component {
         src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719224516/Icon_j5mhse.png"
         alt="failure view"
         className="original-failure-image"
+        loading="lazy"
       />
       <p className="original-failure-description">
         Something went wrong. Please try again

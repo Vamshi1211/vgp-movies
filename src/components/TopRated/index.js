@@ -93,6 +93,7 @@ class TopRated extends Component {
         src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719224516/Icon_j5mhse.png"
         alt="failure view"
         className="trending-failure-image"
+        loading="lazy"
       />
       <p className="trending-failure-description">
         Something went wrong. Please try again
@@ -119,6 +120,7 @@ class TopRated extends Component {
                 className="trending-logo-image"
                 src={eachMovie.poster_path}
                 alt={eachMovie.title}
+                loading="lazy"
               />
             </Link>
           </div>

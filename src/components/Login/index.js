@@ -66,6 +66,7 @@ class Login extends Component {
             src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719130432/Group_7399_k2bkjt.png"
             alt="login website logo"
             className="login-website-logo"
+            loading="lazy"
           />
         </div>
         <div className="form-bg-container">

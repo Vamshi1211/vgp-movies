@@ -112,6 +112,7 @@ class Home extends Component {
         src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719224516/Icon_j5mhse.png"
         alt="failure view"
         className="failure-image"
+        loading="lazy"
       />
       <p className="failure-description">
         Something went wrong. Please try again
