@@ -134,9 +134,14 @@ class Header extends Component {
               </div>
               {isClickedHamburger === true && (
                 <ul className="popup-container">
-                  <Link to="/" className="hamburger-link-item ">
-                    <li className="nav-item">Home</li>
-                  </Link>
+                  {path === '/' ? (
+                    <li className="nav-item hamburger-link-item">Home</li>
+                  ) : (
+                    <Link to="/" className="hamburger-link-item">
+                      <li className="nav-item">Home</li>
+                    </Link>
+                  )}
+
                   <Link to="/popular" className="hamburger-link-item">
                     <li className="nav-item">Popular</li>
                   </Link>
