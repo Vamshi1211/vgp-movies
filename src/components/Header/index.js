@@ -26,7 +26,12 @@ class Header extends Component {
     return (
       <MoviesContext.Consumer>
         {value => {
-          const {searchInput, onChangeSearch, onClickSearch} = value
+          const {
+            searchInput,
+            onChangeSearch,
+            onClickSearch,
+            onEnterKeyDown,
+          } = value
 
           const onChangeSearchInput = event => {
             onChangeSearch(event.target.value)
@@ -36,24 +41,42 @@ class Header extends Component {
             onClickSearch()
           }
 
+          const onSearchKeyDown = event => {
+            onEnterKeyDown(event.key)
+          }
+
           const opacityValue =
-            path === '/' || path.includes('/movies/') ? '0.5' : '1'
+            path === '/' || path.includes('/movies/') ? '0.6' : '1'
 
           return (
             <nav className="main-bg-container" style={{opacity: opacityValue}}>
               <div className="header-top-container">
                 <div className="title-and-nav-container">
-                  <Link to="/">
+                  {path === '/' ? (
                     <img
                       src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719162886/Group_7399_1_kzymdq.png"
                       alt="website logo"
                       className="title-image"
                     />
-                  </Link>
-                  <ul className="navbar-container">
-                    <Link to="/" className="link-item">
-                      <li className="nav-item">Home</li>
+                  ) : (
+                    <Link to="/">
+                      <img
+                        src="https://res.cloudinary.com/dxs4gnnbs/image/upload/v1719162886/Group_7399_1_kzymdq.png"
+                        alt="website logo"
+                        className="title-image"
+                      />
                     </Link>
+                  )}
+
+                  <ul className="navbar-container">
+                    {path === '/' ? (
+                      <li className="nav-item link-item">Home</li>
+                    ) : (
+                      <Link to="/" className="link-item">
+                        <li className="nav-item">Home</li>
+                      </Link>
+                    )}
+
                     <Link to="/popular" className="link-item">
                       <li className="nav-item">Popular</li>
                     </Link>
@@ -68,6 +91,7 @@ class Header extends Component {
                         onChange={onChangeSearchInput}
                         placeholder="Search"
                         type="search"
+                        onKeyDown={onSearchKeyDown}
                       />
                       <button
                         type="button"

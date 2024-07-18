@@ -6,6 +6,7 @@ import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
 import Footer from '../Footer'
+import Pagination from '../Pagination'
 
 import './index.css'
 
@@ -20,6 +21,8 @@ class Popular extends Component {
   state = {
     apiStatus: apiStatusValue.initial,
     popularMovies: [],
+    currentPage: 1,
+    postsPerPage: 8,
   }
 
   componentDidMount() {
@@ -38,7 +41,6 @@ class Popular extends Component {
         Authorization: `Bearer ${jwtToken}`,
       },
     }
-
     const response = await fetch(url, options)
 
     if (response.ok === true) {
@@ -58,23 +60,40 @@ class Popular extends Component {
     </div>
   )
 
+  setCurrentPost = page => {
+    this.setState({currentPage: page})
+  }
+
   renderPopularView = () => {
-    const {popularMovies} = this.state
+    const {popularMovies, currentPage, postsPerPage} = this.state
+
+    const lastPostIndex = currentPage * postsPerPage
+    const firstPostIndex = lastPostIndex - postsPerPage
+
+    const currentPost = popularMovies.slice(firstPostIndex, lastPostIndex)
 
     return (
-      <ul className="popular-list-container">
-        {popularMovies.map(eachMovie => (
-          <li className="popular-list-item" key={eachMovie.id}>
-            <Link to={`/movies/${eachMovie.id}`} key={eachMovie.id}>
-              <img
-                src={eachMovie.poster_path}
-                alt={eachMovie.title}
-                className="popular-image"
-              />
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <>
+        <ul className="popular-list-container">
+          {currentPost.map(eachMovie => (
+            <li className="popular-list-item" key={eachMovie.id}>
+              <Link to={`/movies/${eachMovie.id}`} key={eachMovie.id}>
+                <img
+                  src={eachMovie.poster_path}
+                  alt={eachMovie.title}
+                  className="popular-image"
+                />
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <Pagination
+          totalPosts={popularMovies.length}
+          postsPerPage={postsPerPage}
+          setCurrentPage={this.setCurrentPost}
+          currentPage={currentPage}
+        />
+      </>
     )
   }
 
@@ -122,6 +141,7 @@ class Popular extends Component {
       <div className="popular-main-container">
         <Header />
         {this.renderViews()}
+
         <Footer />
       </div>
     )

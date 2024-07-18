@@ -4,6 +4,7 @@ import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 import Header from '../Header'
 // import Footer from '../Footer'
+import Pagination from '../Pagination'
 
 import MoviesContext from '../../context/MoviesContext'
 import './index.css'
@@ -20,11 +21,9 @@ class Search extends Component {
     apiStatus: apiStatusValue.initial,
     searchInput: '',
     searchResults: [],
+    currentPage: 1,
+    postsPerPage: 8,
   }
-
-  //   componentDidMount() {
-  //     this.getSearchResults()
-  //   }
 
   getSearchResults = async () => {
     const {searchInput} = this.state
@@ -61,25 +60,42 @@ class Search extends Component {
     </>
   )
 
+  setCurrentPage = page => {
+    this.setState({currentPage: page})
+  }
+
   renderSearchView = () => {
-    const {searchResults, searchInput} = this.state
+    const {searchResults, searchInput, currentPage, postsPerPage} = this.state
+
+    const lastPageIndex = currentPage * postsPerPage
+    const firstPageIndex = lastPageIndex - postsPerPage
+
+    const currentPost = searchResults.slice(firstPageIndex, lastPageIndex)
 
     return (
       <>
         {searchResults.length > 0 ? (
-          <ul className="search-list-container">
-            {searchResults.map(eachResult => (
-              <li className="search-list-item">
-                <Link to={`/movies/${eachResult.id}`} key={eachResult.id}>
-                  <img
-                    src={eachResult.poster_path}
-                    alt={eachResult.title}
-                    className="search-poster"
-                  />
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <>
+            <ul className="search-list-container">
+              {currentPost.map(eachResult => (
+                <li className="search-list-item">
+                  <Link to={`/movies/${eachResult.id}`} key={eachResult.id}>
+                    <img
+                      src={eachResult.poster_path}
+                      alt={eachResult.title}
+                      className="search-poster"
+                    />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+            <Pagination
+              totalPosts={searchResults.length}
+              postsPerPage={postsPerPage}
+              setCurrentPage={this.setCurrentPage}
+              currentPage={currentPage}
+            />
+          </>
         ) : (
           <div className="no-search-result-container">
             <img
@@ -144,6 +160,13 @@ class Search extends Component {
     this.getSearchResults()
   }
 
+  onEnterKeyDown = entered => {
+    const {searchInput} = this.state
+    if (entered === 'Enter' && searchInput !== '') {
+      this.getSearchResults()
+    }
+  }
+
   render() {
     const {searchInput} = this.state
 
@@ -153,6 +176,7 @@ class Search extends Component {
           searchInput,
           onChangeSearch: this.onChangeSearch,
           onClickSearch: this.onClickSearch,
+          onEnterKeyDown: this.onEnterKeyDown,
         }}
       >
         <div className="search-bg-container">

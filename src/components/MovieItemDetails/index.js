@@ -6,6 +6,7 @@ import format from 'date-fns/format'
 import Header from '../Header'
 import SimilarMovies from '../SimilarMovies'
 import Footer from '../Footer'
+import Pagination from '../Pagination'
 
 import './index.css'
 
@@ -17,7 +18,12 @@ const apiStatusValue = {
 }
 
 class MovieItemDetails extends Component {
-  state = {movieDetails: {}, apiStatus: apiStatusValue.initial}
+  state = {
+    movieDetails: {},
+    apiStatus: apiStatusValue.initial,
+    currentPage: 1,
+    postsPerPage: 8,
+  }
 
   componentDidMount() {
     this.getMovieDetails()
@@ -67,8 +73,13 @@ class MovieItemDetails extends Component {
     }
   }
 
+  setCurrentPage = page => {
+    this.setState({currentPage: page})
+  }
+
   renderMovieDetailsView = () => {
-    const {movieDetails} = this.state
+    const {movieDetails, currentPage, postsPerPage} = this.state
+
     const {
       adult,
       backdropPath,
@@ -83,6 +94,11 @@ class MovieItemDetails extends Component {
       voteCount,
       similarMovies,
     } = movieDetails
+
+    const lastPostIndex = currentPage * postsPerPage
+    const firstPostIndex = lastPostIndex - postsPerPage
+
+    const currentPost = similarMovies.slice(firstPostIndex, lastPostIndex)
 
     const updatedGenres = genres.map(eachItem => ({
       uniqueId: eachItem.id,
@@ -114,6 +130,8 @@ class MovieItemDetails extends Component {
           }}
         >
           <Header />
+          <div className="side-gradient">.</div>
+
           <div className="movie-details-text-container">
             <h1 className="movie-title">{title}</h1>
             <div className="duration-rated-release-date-container">
@@ -126,6 +144,7 @@ class MovieItemDetails extends Component {
               Play
             </button>
           </div>
+
           <div className="bottom-gradient">.</div>
         </div>
 
@@ -190,11 +209,18 @@ class MovieItemDetails extends Component {
         <div className="similar-videos-container">
           <h1 className="similar-videos-heading">More like this </h1>
           <ul className="similar-list-container">
-            {similarMovies.map(eachMovie => (
+            {currentPost.map(eachMovie => (
               <SimilarMovies key={eachMovie.id} eachMovie={eachMovie} />
             ))}
           </ul>
         </div>
+
+        <Pagination
+          totalPosts={similarMovies.length}
+          postsPerPage={postsPerPage}
+          setCurrentPage={this.setCurrentPage}
+          currentPage={currentPage}
+        />
 
         <Footer />
       </>

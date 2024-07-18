@@ -8,13 +8,25 @@ const Footer = () => (
         <FaGoogle />
       </li>
 
-      <li className="icons">
-        <FaTwitter />
-      </li>
+      <a
+        target="__blank"
+        href="https://x.com/vamshi_cric12"
+        className="link-icon"
+      >
+        <li className="icons">
+          <FaTwitter />
+        </li>
+      </a>
 
-      <li className="icons">
-        <FaInstagram />
-      </li>
+      <a
+        target="__blank"
+        href="https://www.instagram.com/vamshi_cric12/?hl=en"
+        className="link-icon"
+      >
+        <li className="icons">
+          <FaInstagram />
+        </li>
+      </a>
 
       <li className="icons">
         <FaYoutube />

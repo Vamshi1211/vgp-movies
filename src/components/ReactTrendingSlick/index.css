@@ -5,19 +5,21 @@
 }
 
 .trending-logo-image {
-  width: 90px;
-  height: 64px;
-  top: 439px;
+  width: 80%;
+  top: 560px;
   left: 32px;
   gap: 0px;
   border-radius: 8px;
+  top: 708px;
+  left: 166px;
+  gap: 0px;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 
 .trending-logo-image:hover {
-  transform: scale(1.2);
+  transform: scale(1);
   box-shadow: 2px 2px 10px hsla(0, 0%, 100%, 0.5411764705882353);
 }
 
@@ -125,7 +127,7 @@ Previous Arrow buttons according to your project */
     margin-right: 10px;
   }
   .trending-logo-image:hover {
-    transform: scale(1.2);
+    transform: scale(1.07);
     box-shadow: 2px 2px 10px hsla(0, 0%, 100%, 0.5411764705882353);
   }
   .slick-prev:before,

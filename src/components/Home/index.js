@@ -82,7 +82,7 @@ class Home extends Component {
       <>
         <div className="home-top-container" style={backgroundStyle}>
           <Header />
-
+          <div className="home-side-gradient">.</div>
           <div className="text-container">
             <h1 className="title-name">{randomMovie.title}</h1>
             <p className="title-description">{randomMovie.overview}</p>
@@ -139,7 +139,7 @@ class Home extends Component {
   }
 
   render() {
-    // const {topRatedMovies} = this.state
+    const {originalMovies} = this.state
 
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken === undefined) {
@@ -149,7 +149,8 @@ class Home extends Component {
 
     return (
       <div className="home-container">
-        {this.renderHomeViews()}
+        {originalMovies.length === 0 ? <Header /> : this.renderHomeViews()}
+
         <div className="body-container">
           <div className="slice-container">
             <div className="slick-main-container">
